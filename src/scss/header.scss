@@ -1,5 +1,6 @@
 .header {
     &__container {
+        border: 1px solid #000;
     }
     &__nav {
     }
@@ -10,7 +11,5 @@
     &__item {
     }
     &__link {
-        &_active {
-        }
     }
 }
