@@ -1,0 +1,46 @@
+{
+  "name": "practice_onlinestore",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "type": "module",
+  "scripts": {
+    "dev": "gulp",
+    "clean": "gulp clean",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Electr0Nick/practice_onlinestore.git"
+  },
+  "author": "Electr0Nick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Electr0Nick/practice_onlinestore/issues"
+  },
+  "homepage": "https://github.com/Electr0Nick/practice_onlinestore#readme",
+  "devDependencies": {
+    "browser-sync": "latest",
+    "del": "6.1.1",
+    "gulp": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-file-include": "latest",
+    "gulp-fonter": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-newer": "latest",
+    "gulp-notify": "latest",
+    "gulp-plumber": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-ttf2woff2": "latest",
+    "gulp-webp": "latest",
+    "gulp-webp-html": "latest",
+    "gulp-webpcss": "latest",
+    "gulp-zip": "latest",
+    "sass": "latest",
+    "webp-converter": "2.2.3",
+    "webpack": "latest",
+    "webpack-stream": "latest"
+  }
+}
