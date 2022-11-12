@@ -1,15 +1,91 @@
 .header {
+    height: 90px;
+    background-color: $blue;
+    color: #fff;
     &__container {
-        border: 1px solid #000;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
     }
     &__nav {
     }
+    &__centerelement {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 200px;
+        height: 130px;
+        border: 1px solid #000;
+        background-color: $blue;
+    }
+    &__logo {
+    }
+    &__phones {
+        border: 1px solid #000;
+    }
+}
+.container {
 }
 .navigation {
+    width: 450px;
+    padding: 9px 0 18px;
+    border: 1px solid #000;
     &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        height: 100%;
     }
     &__item {
+        align-self: flex-start;
+        margin-right: 5px;
+        border-radius: 14px;
+        background-color: $blue;
+        a {
+            text-decoration: underline;
+        }
+        &:hover {
+            background-color: $dark-blue;
+        }
     }
     &__link {
+        padding: 5px 22px;
+        font-family: Play, sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 18px;
+    }
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #000;
+    &__main {
+        font-family: Play, sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+    }    
+    &__secondary {
+        font-family: Roboto, sans-serif;
+        font-size: 12px;
+        font-weight: 300;
+    }
+}
+.phones {
+
+    &__block {
+    }
+}
+.phonesblock {
+
+    &__location {
+    }
+
+    &__number {
     }
 }

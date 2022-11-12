@@ -3,12 +3,14 @@
 // ----------------------------------------------fonts----------------------------------------------
 @import "fonts.scss";
 // ----------------------------------------------variables----------------------------------------------
-$blue_text: #1ab9ce;
-$blue_text: #36949f;
-$blue_text: #22b7ca;
-$blue_el: #4da0b9;
-$blue_el: #068292;
-$blue_el: #098494;
+// $blue_text: #1ab9ce;
+// $blue_text: #22b7ca;
+// $blue_text: #36949f;
+// $blue_el: #4da0b9;
+// $blue_el: #098494;
+// $blue_el: #068292;
+$blue: #14c0d4;
+$dark-blue: #068292;
 $orange: #f68038;
 $lite-grey_images: #dddddd;
 $grey_images: #cbcbcb;
@@ -30,6 +32,9 @@ body {
     width: 100%;
     min-height: 100%;
     overflow: hidden;
+    
+    
+    min-height: 100vh;
 }
 
 // ----------------------------------------------container----------------------------------------------

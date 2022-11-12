@@ -142,13 +142,106 @@ body {
 .wrapper {
   width: 100%;
   min-height: 100%;
-  overflow: hidden
+  overflow: hidden;
+  min-height: 100vh
 }
 .container {
   max-width: 1140px;
   width: 100%;
   margin: 0 auto
 }
+.header {
+  height: 90px;
+  background-color: #14c0d4;
+  color: #fff
+}
 .header__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%
+}
+.header__centerelement {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%,0);
+  -ms-transform: translate(-50%,0);
+  transform: translate(-50%,0);
+  width: 200px;
+  height: 130px;
+  border: 1px solid #000;
+  background-color: #14c0d4
+}
+.header__phones {
   border: 1px solid #000
+}
+.navigation {
+  width: 450px;
+  padding: 9px 0 18px;
+  border: 1px solid #000
+}
+.navigation__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 100%
+}
+.navigation__item {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin-right: 5px;
+  border-radius: 14px;
+  background-color: #14c0d4
+}
+.navigation__item a {
+  text-decoration: underline
+}
+.navigation__item:hover {
+  background-color: #068292
+}
+.navigation__link {
+  padding: 5px 22px;
+  font-family: Play,sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 18px
+}
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid #000
+}
+.logo__main {
+  font-family: Play,sans-serif;
+  font-size: 48px;
+  font-weight: 700
+}
+.logo__secondary {
+  font-family: Roboto,sans-serif;
+  font-size: 12px;
+  font-weight: 300
 }
