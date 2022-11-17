@@ -23,14 +23,14 @@ a:active {
 
 /* Links */
 
-a, a:link, a:visited  {
+a, a:visited  {
     color: inherit;
     text-decoration: none;
     display: inline-block;
 }
 
 a:hover  {
-    color: inherit;
+    // color: inherit;
     text-decoration: none;
 }
 

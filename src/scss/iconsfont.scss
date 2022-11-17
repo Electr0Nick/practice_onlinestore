@@ -1,0 +1,57 @@
+[class^="icon-"]::before, [class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angles:before {
+  content: "\e900";
+}
+.icon-arrow:before {
+  content: "\e901";
+}
+.icon-basket:before {
+  content: "\e902";
+}
+.icon-calendar:before {
+  content: "\e903";
+}
+.icon-email:before {
+  content: "\e904";
+}
+.icon-facebook:before {
+  content: "\e905";
+}
+.icon-instagram:before {
+  content: "\e906";
+}
+.icon-keycircul:before {
+  content: "\e907";
+}
+.icon-magnifier:before {
+  content: "\e908";
+}
+.icon-phone:before {
+  content: "\e909";
+}
+.icon-phonearrow:before {
+  content: "\e90a";
+}
+.icon-profile:before {
+  content: "\e90b";
+}
+.icon-telegram:before {
+  content: "\e90c";
+}
+.icon-vk:before {
+  content: "\e90d";
+}

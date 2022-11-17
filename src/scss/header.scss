@@ -1,12 +1,13 @@
 .header {
-    height: 90px;
-    background-color: $blue;
-    color: #fff;
     &__container {
+    }
+    &__upblock {
         position: relative;
         display: flex;
         justify-content: space-between;
-        height: 100%;
+        height: 90px;
+        background-color: $blue;
+        color: #fff;
     }
     &__nav {
     }
@@ -15,23 +16,35 @@
         top: 0;
         left: 50%;
         transform: translate(-50%, 0);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
         width: 200px;
         height: 130px;
-        border: 1px solid #000;
+        padding-bottom: 45px;
+        border-radius: 0% 0% 50% 50% / 0% 0% 45% 45%;
         background-color: $blue;
     }
     &__logo {
     }
     &__phones {
-        border: 1px solid #000;
     }
-}
-.container {
+    &__downblock {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        padding-bottom: 5px;
+        border: 1px solid red;
+    }
+    &__input {
+    }
+    &__interplay {
+    }
 }
 .navigation {
     width: 450px;
     padding: 9px 0 18px;
-    border: 1px solid #000;
     &__list {
         display: flex;
         flex-direction: column;
@@ -45,9 +58,6 @@
         margin-right: 5px;
         border-radius: 14px;
         background-color: $blue;
-        a {
-            text-decoration: underline;
-        }
         &:hover {
             background-color: $dark-blue;
         }
@@ -58,13 +68,14 @@
         font-size: 14px;
         font-weight: 700;
         line-height: 18px;
+        text-decoration: underline;
+        color: #fff;
     }
 }
 .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #000;
     &__main {
         font-family: Play, sans-serif;
         font-size: 48px;
@@ -77,15 +88,95 @@
     }
 }
 .phones {
-
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 430px;
+    padding: 9px 40px 18px 0;
     &__block {
+    }
+    &__icon {
+        font-size: 35px;
+        line-height: 25px;
+    }
+    &__line {
+        width: 1px;
+        height: 30px;
+        background-color: #fff;
     }
 }
 .phonesblock {
-
     &__location {
+        font-family: Roboto, sans-serif;
+        font-size: 12px;
+        font-weight: 300;
     }
-
     &__number {
+        font-family: Roboto, sans-serif;
+        font-size: 18px;
+        font-weight: 900;
+    }
+}
+.input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    border: 1px solid #000;
+    &__signin {
+    }
+    &__signup {
+    }
+    &__email {
+    }
+    &__address {
+    }
+}
+.interplay {
+    display: flex;
+    width: 450px;
+    border: 1px solid #000;
+    &__call {
+    }
+    &__timetable {
+    }
+    &__basket {
+    }
+    &__amount {
+    }
+}
+.link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: $grey_text;
+    &__icon {
+        font-size: 24px;
+        line-height: 0;
+    }
+    &__text {
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            border-bottom: 1px dashed $grey_text;
+        }
+    }
+    &:hover {
+        .link__text {
+            &::after {
+                border-bottom:1px dashed$light-blue;
+            }
+        }
+        color: $light-blue;
+    }
+}
+.basket {
+    &__circle {
+    }
+    &__image {
     }
 }

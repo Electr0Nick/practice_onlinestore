@@ -2,14 +2,15 @@
 @import "reset.scss";
 // ----------------------------------------------fonts----------------------------------------------
 @import "fonts.scss";
+@import "iconsfont.scss";
 // ----------------------------------------------variables----------------------------------------------
-// $blue_text: #1ab9ce;
 // $blue_text: #22b7ca;
 // $blue_text: #36949f;
 // $blue_el: #4da0b9;
 // $blue_el: #098494;
 // $blue_el: #068292;
-$blue: #14c0d4;
+$light-blue: #1ab9ce;
+$blue: #009baf;
 $dark-blue: #068292;
 $orange: #f68038;
 $lite-grey_images: #dddddd;
