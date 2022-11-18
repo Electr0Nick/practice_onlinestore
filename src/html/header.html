@@ -1,6 +1,6 @@
 <header class="header">
-    <div class="header__container container">
-        <div class="header__upblock">
+    <div class="header__upblock">
+        <div class="header__container container">
             <nav class="header__nav navigation">
                 <ul class="navigation__list">
                     <li class="navigation__item"><a class="navigation__link" href="##">Бренды</a></li>
@@ -13,24 +13,26 @@
             </nav>
             <div class="header__centerelement">
                 <div class="header__logo logo">
-                    <span class="logo__main">LOGO</span>
-                    <span class="logo__secondary">спортивный магазин</span>
+                    <img class="logo__image" src="img/logo.png" alt="logo">
+                    <span class="logo__text">магазин спорт-товаров</span>
                 </div>
             </div>
             <div class="header__phones phones">
                 <div class="phones__icon icon-phone"></div>
                 <div class="phones__block phonesblock">
                     <div class="phonesblock__location">Москва</div>
-                    <div class="phonesblock__number">8-499-123-45-67</div>
+                    <a class="phonesblock__number" href="tel:84991234567">8-499-123-45-67</a>
                 </div>
                 <div class="phones__line"></div>
                 <div class="phones__block phonesblock">
                     <div class="phonesblock__location">Бесплатно для России</div>
-                    <div class="phonesblock__number">8-800-123-45-67</div>
+                    <a class="phonesblock__number" href="tel:88001234567">8-800-123-45-67</a>
                 </div>
             </div>
         </div>
-        <div class="header__downblock">
+    </div>
+    <div class="header__downblock">
+        <div class="header__container container">
             <div class="header__input input">
                 <a href="##" class="input__signin link">
                     <span class="link__icon icon-keycircul"></span>
@@ -38,24 +40,31 @@
                 <a href="##" class="input__signup link">
                     <span class="link__icon icon-profile"></span>
                     <span class="link__text">Регистрация</span></a>
-                <a href="##" class="input__email link">
+                <a href="mailto:info@sport.com" class="input__email link">
                     <span class="link__icon icon-email"></span>
-                    <span class="link__text">info@logo.com</span></a>
+                    <span class="link__text">info@sport.com</span></a>
             </div>
             <div class="header__interplay interplay">
-                <div class="interplay__call icon-phonearrow">
-                    <a href="##" class="link">ОБратный звонок</a>
+                <a href="##" class="interplay__call link">
+                    <span class="link__icon icon-phonearrow"></span>
+                    <span class="link__text">Обратный звонок</span></a>
+                <div class="interplay__timetable timetable">
+                    <span class="timetable__icon icon-calendar"></span>
+                    <div class="timetable__text">
+                        <div class="timetable__time">
+                            <span class="timetable__time_bold">Пн-Пт:</span> 09:00-21:00;
+                        </div>
+                        <div class="timetable__time">
+                            <span class="timetable__time_bold">Сб-Вс:</span> 10:00-20:00
+                        </div>
+                    </div>
                 </div>
-                <div class="interplay__timetable icon-calendar">
-                    <div><span>Пн-Пт:</span> 09:00-21:00ж</div>
-                    <div><span>Сб-Вс:</span> 10:00-20:00ж</div>
-                </div>
-                <div class="interplay__basket basket">
+                <a class="interplay__basket basket" href="##">
                     <div class="basket__circle">
                         <div class="basket__image icon-basket"></div>
                     </div>
-                    <div class="interplay__amount">12</div>
-                </div>
+                    <div class="interplay__amount">2</div>
+                </a>
             </div>
         </div>
     </div>

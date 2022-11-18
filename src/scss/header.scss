@@ -1,13 +1,14 @@
 .header {
-    &__container {
-    }
     &__upblock {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
         height: 90px;
         background-color: $blue;
         color: #fff;
+    }
+    &__container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        height: 100%;
     }
     &__nav {
     }
@@ -17,11 +18,10 @@
         left: 50%;
         transform: translate(-50%, 0);
         display: flex;
-        justify-content: center;
         align-items: flex-end;
         width: 200px;
         height: 130px;
-        padding-bottom: 45px;
+        padding-bottom: 40px;
         border-radius: 0% 0% 50% 50% / 0% 0% 45% 45%;
         background-color: $blue;
     }
@@ -30,12 +30,8 @@
     &__phones {
     }
     &__downblock {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         height: 70px;
         padding-bottom: 5px;
-        border: 1px solid red;
     }
     &__input {
     }
@@ -43,8 +39,8 @@
     }
 }
 .navigation {
-    width: 450px;
-    padding: 9px 0 18px;
+    flex: 0 0 37%;
+    padding: 12px 0 20px;
     &__list {
         display: flex;
         flex-direction: column;
@@ -58,40 +54,43 @@
         margin-right: 5px;
         border-radius: 14px;
         background-color: $blue;
+        transition: 300ms;
         &:hover {
             background-color: $dark-blue;
         }
     }
     &__link {
         padding: 5px 22px;
+        color: #fff;
         font-family: Play, sans-serif;
         font-size: 14px;
         font-weight: 700;
         line-height: 18px;
         text-decoration: underline;
-        color: #fff;
     }
 }
 .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    &__main {
-        font-family: Play, sans-serif;
-        font-size: 48px;
-        font-weight: 700;
+    gap: 5px;
+    width: 100%;
+    &__image {
+        width: 180px;
     }    
-    &__secondary {
+    &__text {
         font-family: Roboto, sans-serif;
         font-size: 12px;
         font-weight: 300;
+        cursor: default;
     }
 }
 .phones {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 430px;
+    justify-content: flex-end;
+    gap: 4%;
+    flex: 0 0 38%;
     padding: 9px 40px 18px 0;
     &__block {
     }
@@ -110,6 +109,7 @@
         font-family: Roboto, sans-serif;
         font-size: 12px;
         font-weight: 300;
+        cursor: default;
     }
     &__number {
         font-family: Roboto, sans-serif;
@@ -117,66 +117,177 @@
         font-weight: 900;
     }
 }
+.link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    &__icon {
+        color: $grey_text;
+        font-size: 24px;
+        line-height: 0;
+        transition: 200ms;
+    }
+    &__text {
+        color: $grey_text;
+        font-family: Roboto, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        transition: 200ms;
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            border-bottom: 1px dashed $grey_text;
+            transition: 200ms;
+        }
+    }
+    &:hover {
+        .link__icon {
+            color: $light-blue;
+        }
+        .link__text {
+            color: $light-blue;
+            &::after {
+                border-bottom:1px dashed$light-blue;
+            }
+        }
+    }
+}
 .input {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    width: 450px;
-    border: 1px solid #000;
+    gap: 10%;
+    flex: 0 0 40%;
+    padding-left: 20px;
     &__signin {
     }
     &__signup {
     }
     &__email {
+        & .link__icon {
+            font-size: 20px;
+        }
+        & .link__text {
+            text-decoration: underline;
+            &::after {
+                display: none;
+            }
+    }
     }
     &__address {
     }
 }
 .interplay {
     display: flex;
-    width: 450px;
-    border: 1px solid #000;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 0 0 40%;
+    gap: 8%;
+    padding-right: 35px;
     &__call {
     }
     &__timetable {
     }
     &__basket {
+        position: relative;
     }
     &__amount {
+        position: absolute;
+        top: -8px;
+        left: 28px;
+        border-radius: 12px;
+        padding: 4px 8px;
+        background-color: $orange;
+        color: #fff;
+        font-family: Roboto, sans-serif;
+        font-size: 16px;
+        line-height: 16px;
+        font-weight: 700;
     }
 }
-.link {
+.timetable {
     display: flex;
     align-items: center;
     gap: 12px;
-    color: $grey_text;
+    cursor: default;
     &__icon {
-        font-size: 24px;
+        color: $grey_text;
+        font-size: 28px;
         line-height: 0;
     }
     &__text {
-        font-family: Roboto, sans-serif;
-        font-size: 14px;
-        font-weight: 300;
-        &::after {
-            content: '';
-            display: block;
-            width: 100%;
-            border-bottom: 1px dashed $grey_text;
-        }
+        color: $grey_text;
     }
-    &:hover {
-        .link__text {
-            &::after {
-                border-bottom:1px dashed$light-blue;
-            }
+    &__time {
+        &_bold {
+            font-weight: 900;
         }
-        color: $light-blue;
     }
 }
-.basket {
-    &__circle {
+
+
+
+
+
+
+@media (max-width: 1140px){
+    .navigation {
+        &__item {
+            margin-right: 2px;
+        }
+        &__link {
+            padding: 5px 15px;
+            font-size: 12px;
+        }
     }
-    &__image {
+    .phones {
+        padding: 9px 15px 18px 0;
+        &__line {
+            height: 25px;
+        }
+    }
+    .phonesblock {
+        &__location {
+            font-size: 11px;
+        }
+        &__number {
+            font-size: 14px;
+        }
+    }
+    .link {
+        gap: 5px;
+        &__icon {
+            color: $grey_text;
+            font-size: 20px;
+        }
+        &__text {
+            font-size: 12px;
+        }
+    }
+    .input {
+        gap: 6%;
+    }
+    .interplay {
+
+        gap: 5%;
+        padding-right: 15px;
+        &__call {
+        }
+        &__timetable {
+        }
+        &__amount {
+            font-size: 12px;
+            line-height: 12px;
+        }
+    }
+    .timetable {
+        gap: 4px;
+        &__icon {
+            font-size: 24px;
+        }
+        &__text {
+            font-size: 10px;
+        }
     }
 }

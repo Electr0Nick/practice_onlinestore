@@ -1,8 +1,8 @@
 // ----------------------------------------------reset----------------------------------------------
-@import "reset.scss";
+@import 'reset.scss';
 // ----------------------------------------------fonts----------------------------------------------
-@import "fonts.scss";
-@import "iconsfont.scss";
+@import 'fonts.scss';
+@import 'iconsfont.scss';
 // ----------------------------------------------variables----------------------------------------------
 // $blue_text: #22b7ca;
 // $blue_text: #36949f;
@@ -25,7 +25,6 @@ body {
     font-family: Roboto, sans-serif;
     font-size: 12px;
     font-weight: 400;
-    color: #000;
 }
 
 // ----------------------------------------------wrapper----------------------------------------------
@@ -33,18 +32,19 @@ body {
     width: 100%;
     min-height: 100%;
     overflow: hidden;
-    
-    
-    min-height: 100vh;
+
+    min-height: 100vh;// temp
 }
 
 // ----------------------------------------------container----------------------------------------------
 .container {
-    max-width: 1140px;
+    max-width: 1170px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 // ----------------------------------------------import----------------------------------------------
-@import "header.scss";
-@import "footer.scss";
+@import 'components.scss';
+@import 'header.scss';
+@import 'footer.scss';

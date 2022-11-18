@@ -1,11 +1,4 @@
 @font-face{
-	font-family: Play;
-	font-display: swap;
-	src: url("../fonts/Play-Bold.woff2") format("woff2"), url("../fonts/Play-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
-}
-@font-face{
 	font-family: icons;
 	font-display: swap;
 	src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
@@ -13,10 +6,24 @@
 	font-style: normal;
 }
 @font-face{
+	font-family: Play;
+	font-display: swap;
+	src: url("../fonts/Play-Bold.woff2") format("woff2"), url("../fonts/Play-Bold.woff") format("woff");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face{
 	font-family: Roboto;
 	font-display: swap;
 	src: url("../fonts/Roboto-Black.woff2") format("woff2"), url("../fonts/Roboto-Black.woff") format("woff");
 	font-weight: 900;
+	font-style: normal;
+}
+@font-face{
+	font-family: Roboto;
+	font-display: swap;
+	src: url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff");
+	font-weight: 700;
 	font-style: normal;
 }
 @font-face{
