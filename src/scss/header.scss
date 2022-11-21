@@ -45,7 +45,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-content: flex-start;
+        align-content: space-between;
         flex-wrap: wrap;
         height: 100%;
     }
@@ -88,7 +88,7 @@
 .phones {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     gap: 4%;
     flex: 0 0 38%;
     padding: 9px 40px 18px 0;
@@ -133,13 +133,7 @@
         font-size: 14px;
         font-weight: 400;
         transition: 200ms;
-        &::after {
-            content: '';
-            display: block;
-            width: 100%;
-            border-bottom: 1px dashed $grey_text;
-            transition: 200ms;
-        }
+        border-bottom: 1px dashed $grey_text;
     }
     &:hover {
         .link__icon {
@@ -147,45 +141,41 @@
         }
         .link__text {
             color: $light-blue;
-            &::after {
-                border-bottom:1px dashed$light-blue;
+            border-bottom:  1px dashed $light-blue;
+        }
+    }
+    &_email {
+        .link__icon {
+            font-size: 22px;
+        }
+        .link__text {
+            border-bottom: 1px solid $grey_text;
+        }
+        &:hover {
+            .link__text {
+                border-bottom:  1px solid $light-blue;
             }
         }
     }
 }
 .input {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     gap: 10%;
-    flex: 0 0 40%;
+    flex: 0 0 37%;
     padding-left: 20px;
-    &__signin {
-    }
-    &__signup {
-    }
-    &__email {
-        & .link__icon {
-            font-size: 20px;
-        }
-        & .link__text {
-            text-decoration: underline;
-            &::after {
-                display: none;
-            }
-    }
-    }
-    &__address {
+    &__link{
     }
 }
 .interplay {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     flex: 0 0 40%;
     gap: 8%;
     padding-right: 35px;
-    &__call {
+    &__link {
     }
     &__timetable {
     }
@@ -242,6 +232,7 @@
         }
     }
     .phones {
+        flex: 0 0 37%;
         padding: 9px 15px 18px 0;
         &__line {
             height: 25px;
@@ -267,11 +258,12 @@
     }
     .input {
         gap: 6%;
+        padding-left: 10px;
     }
     .interplay {
-
         gap: 5%;
-        padding-right: 15px;
+        flex: 0 0 38%;
+        padding-right: 10px;
         &__call {
         }
         &__timetable {
@@ -287,7 +279,7 @@
             font-size: 24px;
         }
         &__text {
-            font-size: 10px;
+            font-size: 9px;
         }
     }
 }
