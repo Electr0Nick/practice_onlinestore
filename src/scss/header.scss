@@ -33,6 +33,7 @@
       height: 60px;
       padding-bottom: 0;
       border-radius: 0;
+      background-color: transparent;
     }
   }
   &__logo {
@@ -42,6 +43,9 @@
   &__downblock {
     height: 70px;
     padding-bottom: 5px;
+    @media($media-mw3){
+      height: 40px;
+    }
   }
   &__input {
   }
@@ -59,7 +63,15 @@
     display: flex;
     align-items: center;
     padding: 0 0 0 15px;
-}
+  }
+  @media($media-mw3){
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 10px;
+  }
+  @media($media-mw4){
+    padding: 0;
+  }
   &__icon {
     z-index: 10;
     display: none;
@@ -107,9 +119,9 @@
     z-index: 5;
     top: 60px;
     left: -100%;
-    width: 300px;
+    width: 320px;
     height: 100%;
-    background-color: rgba(7, 140, 158, 0.7);
+    background-color: rgba(7, 140, 158, 0.6);
     transition: 500ms;
     &.active {
       left: 0;
@@ -142,6 +154,9 @@
     }
     @media($media-mw3){
       background-color: transparent;
+      &:hover {
+        background-color: transparent;
+      }
     }
   }
   &__link {
@@ -207,13 +222,20 @@
     justify-content: flex-end;
   }
   @media ($media-mw3){
-    padding: 0 15px 0 0;
+    padding: 0 10px 0 0;
+  }
+  @media ($media-mw4){
+    gap: 0;
+    padding: 0;
   }
   &__block {
   }
   &__icon {
     font-size: 35px;
     line-height: 25px;
+    @media ($media-mw4) {
+      font-size: 27px;
+    }
   }
   &__line {
     width: 1px;
@@ -266,7 +288,7 @@
   }
   &__icon {
     color: $grey_text;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 0;
     transition: 200ms;
     @media ($media-mw1){
@@ -297,9 +319,15 @@
     }
   }
   &_email {
+    @media($media-mw2){
+      display: none;
+    }
+    @media($media-mw3){
+      display: flex;
+    }
     .link__icon {
       font-size: 20px;
-      @media ($media-mw2){
+      @media ($media-mw3){
           font-size: 14px;
       }
     }
@@ -325,8 +353,17 @@
     padding-left: 10px;
   }
   @media($media-mw2){
-    gap: 4%;
+    gap: 10%;
     justify-content: flex-start;
+  }
+  @media($media-mw3){
+    justify-content: space-between;
+    gap: 0;
+    flex: 0 0 100%;
+    padding: 0 10px;
+  }
+  @media($media-mw4){
+    display: none;
   }
   &__link{
   }
@@ -345,17 +382,35 @@
     padding-right: 10px;
   }
   @media ($media-mw2){
+    gap: 10%;
     justify-content: flex-end;
   }
+  @media ($media-mw3){
+    display: none;
+  }
+  
   &__link {
     @media($media-mw2){
       display: none;
+    }
+    @media($media-mw3){
+      display: flex;
     }
   }
   &__timetable {
   }
   &__basket {
     position: relative;
+    @media ($media-mw3){
+      & .basket__circle {
+        width: 35px;
+        height: 35px;
+        background-color: transparent
+      }
+      & .basket__image {
+        font-size: 20px;
+    }
+    }
   }
   &__amount {
     position: absolute;
@@ -373,6 +428,14 @@
       font-size: 12px;
       line-height: 12px;
     }
+    @media ($media-mw3){
+      top: 0px;
+      left: 20px;
+      border-radius: 12px;
+      padding: 3px 5px;
+      font-size: 11px;
+      line-height: 8px;
+    }
   }
 }
 .timetable {
@@ -389,6 +452,9 @@
     line-height: 0;
     @media ($media-mw1){
       font-size: 24px;
+    }
+    @media ($media-mw2){
+      font-size: 20px;
     }
   }
   &__text {

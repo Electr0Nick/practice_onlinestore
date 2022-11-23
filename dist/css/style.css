@@ -97,17 +97,17 @@ legend {
   display: block
 }
 @font-face {
-  font-family: icons;
-  font-display: swap;
-  src: url(../fonts/icons.woff2) format("woff2"),url(../fonts/icons.woff) format("woff");
-  font-weight: 400;
-  font-style: normal
-}
-@font-face {
   font-family: Play;
   font-display: swap;
   src: url(../fonts/Play-Bold.woff2) format("woff2"),url(../fonts/Play-Bold.woff) format("woff");
   font-weight: 700;
+  font-style: normal
+}
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url(../fonts/icons.woff2) format("woff2"),url(../fonts/icons.woff) format("woff");
+  font-weight: 400;
   font-style: normal
 }
 @font-face {
@@ -125,10 +125,10 @@ legend {
   font-style: normal
 }
 @font-face {
-  font-family: Roboto;
+  font-family: UniSansHeavyCaps;
   font-display: swap;
-  src: url(../fonts/Roboto-Light.woff2) format("woff2"),url(../fonts/Roboto-Light.woff) format("woff");
-  font-weight: 300;
+  src: url(../fonts/UniSansHeavyCaps.woff2) format("woff2"),url(../fonts/UniSansHeavyCaps.woff) format("woff");
+  font-weight: 400;
   font-style: normal
 }
 @font-face {
@@ -139,10 +139,10 @@ legend {
   font-style: normal
 }
 @font-face {
-  font-family: UniSansHeavyCaps;
+  font-family: Roboto;
   font-display: swap;
-  src: url(../fonts/UniSansHeavyCaps.woff2) format("woff2"),url(../fonts/UniSansHeavyCaps.woff) format("woff");
-  font-weight: 400;
+  src: url(../fonts/Roboto-Light.woff2) format("woff2"),url(../fonts/Roboto-Light.woff) format("woff");
+  font-weight: 300;
   font-style: normal
 }
 [class*=" icon-"]::before,
@@ -287,12 +287,18 @@ body {
     align-items: center;
     height: 60px;
     padding-bottom: 0;
-    border-radius: 0
+    border-radius: 0;
+    background-color: transparent
   }
 }
 .header__downblock {
   height: 70px;
   padding-bottom: 5px
+}
+@media (max-width:768px) {
+  .header__downblock {
+    height: 40px
+  }
 }
 .menu {
   height: 100%;
@@ -312,6 +318,22 @@ body {
     -ms-flex-align: center;
     align-items: center;
     padding: 0 0 0 15px
+  }
+}
+@media (max-width:768px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 0 0 10px
+  }
+}
+@media (max-width:620px) {
+  .menu {
+    padding: 0
   }
 }
 .menu__icon {
@@ -383,9 +405,9 @@ body {
     z-index: 5;
     top: 60px;
     left: -100%;
-    width: 300px;
+    width: 320px;
     height: 100%;
-    background-color: rgba(7,140,158,.7);
+    background-color: rgba(7,140,158,.6);
     -webkit-transition: .5s;
     -o-transition: .5s;
     transition: .5s
@@ -441,6 +463,9 @@ body {
 }
 @media (max-width:768px) {
   .navigation__item {
+    background-color: transparent
+  }
+  .navigation__item:hover {
     background-color: transparent
   }
 }
@@ -541,12 +566,23 @@ body {
 }
 @media (max-width:768px) {
   .phones {
-    padding: 0 15px 0 0
+    padding: 0 10px 0 0
+  }
+}
+@media (max-width:620px) {
+  .phones {
+    gap: 0;
+    padding: 0
   }
 }
 .phones__icon {
   font-size: 35px;
   line-height: 25px
+}
+@media (max-width:620px) {
+  .phones__icon {
+    font-size: 27px
+  }
 }
 .phones__line {
   width: 1px;
@@ -610,7 +646,7 @@ body {
 }
 .link__icon {
   color: #999;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 0;
   -webkit-transition: .2s;
   -o-transition: .2s;
@@ -648,10 +684,22 @@ body {
   color: #1ab9ce;
   border-bottom: 1px dashed #1ab9ce
 }
+@media (max-width:900px) {
+  .link_email {
+    display: none
+  }
+}
+@media (max-width:768px) {
+  .link_email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+  }
+}
 .link_email .link__icon {
   font-size: 20px
 }
-@media (max-width:900px) {
+@media (max-width:768px) {
   .link_email .link__icon {
     font-size: 14px
   }
@@ -686,10 +734,27 @@ body {
 }
 @media (max-width:900px) {
   .input {
-    gap: 4%;
+    gap: 10%;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start
+  }
+}
+@media (max-width:768px) {
+  .input {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    gap: 0;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    padding: 0 10px
+  }
+}
+@media (max-width:620px) {
+  .input {
+    display: none
   }
 }
 .interplay {
@@ -719,9 +784,15 @@ body {
 }
 @media (max-width:900px) {
   .interplay {
+    gap: 10%;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end
+  }
+}
+@media (max-width:768px) {
+  .interplay {
+    display: none
   }
 }
 @media (max-width:900px) {
@@ -729,8 +800,25 @@ body {
     display: none
   }
 }
+@media (max-width:768px) {
+  .interplay__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+  }
+}
 .interplay__basket {
   position: relative
+}
+@media (max-width:768px) {
+  .interplay__basket .basket__circle {
+    width: 35px;
+    height: 35px;
+    background-color: transparent
+  }
+  .interplay__basket .basket__image {
+    font-size: 20px
+  }
 }
 .interplay__amount {
   position: absolute;
@@ -749,6 +837,16 @@ body {
   .interplay__amount {
     font-size: 12px;
     line-height: 12px
+  }
+}
+@media (max-width:768px) {
+  .interplay__amount {
+    top: 0;
+    left: 20px;
+    border-radius: 12px;
+    padding: 3px 5px;
+    font-size: 11px;
+    line-height: 8px
   }
 }
 .timetable {
@@ -774,6 +872,11 @@ body {
 @media (max-width:1140px) {
   .timetable__icon {
     font-size: 24px
+  }
+}
+@media (max-width:900px) {
+  .timetable__icon {
+    font-size: 20px
   }
 }
 .timetable__text {

@@ -3,6 +3,9 @@
 // для сборки GULP:
 import isWebp from './modules/is_webp_for_css.js';
 isWebp();
+// для динамического адаптива
+import { useDynamicAdapt } from './modules/dynamicAdapt.js'
+useDynamicAdapt();
 
 const activeClass = (el) => {
   el.classList.toggle('active');
@@ -16,8 +19,3 @@ const addActiveForNav = () => {
   activeClass(menuButton);
 }
 menuButton.addEventListener('click', addActiveForNav);
-
-// перенос корзины
-const basket = document.getElementById('basket');
-const phonesBlock = document.getElementById('phones-block');
-// phonesBlock.append(basket);
