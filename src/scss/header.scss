@@ -32,6 +32,7 @@
       align-items: center;
       height: 60px;
       padding-bottom: 0;
+      border-radius: 0;
     }
   }
   &__logo {
@@ -47,6 +48,7 @@
   &__interplay {
   }
 }
+// -------------------------------------menu-------------------------------------
 .menu {
   height: 100%;
   padding: 12px 0 20px;
@@ -66,6 +68,25 @@
     width: 30px;
     height: 18px;
     cursor: pointer;
+    overflow: hidden;
+    &.active {
+      width: 24px;
+      height: 24px;
+      transform: translate(3px);
+      & .menu__iconline:first-child{
+        width: 40px;
+        transform: rotate(45deg);
+        transform-origin: 3px -3px 0;
+      }
+      & .menu__iconline:nth-child(2){
+        transform: translate(-100%);
+      }
+      & .menu__iconline:last-child{
+        width: 40px;
+        transform: rotate(-45deg);
+        transform-origin: 2px 3px 0;
+      }
+    }
     @media($media-mw3) {
       display: flex;
     }
@@ -74,6 +95,7 @@
     width: 100%;
     height: 2px;
     background-color: #fff;
+    transition: 300ms;
   }
   &__nav {
   }
@@ -83,20 +105,14 @@
   @media($media-mw3){
     position: fixed;
     z-index: 5;
-    top: -100%;
-    left: 0;
-    width: 100%;
+    top: 60px;
+    left: -100%;
+    width: 300px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    &::before {
-      display: block;
-      content: '';
-      width: 100%;
-      height: 60px;
-      background-color: $blue;
-    }
+    background-color: rgba(7, 140, 158, 0.7);
+    transition: 500ms;
     &.active {
-      top: 0;
+      left: 0;
     }
   }
   &__list {
@@ -149,7 +165,7 @@
   }
   }
 }
-
+// -------------------------------------logo-------------------------------------
 .logo {
   display: flex;
   flex-direction: column;
@@ -175,7 +191,7 @@
     }
   }
 }
-
+// -------------------------------------phones-------------------------------------
 .phones {
   display: flex;
   align-items: center;
@@ -189,6 +205,9 @@
   }
   @media ($media-mw2){
     justify-content: flex-end;
+  }
+  @media ($media-mw3){
+    padding: 0 15px 0 0;
   }
   &__block {
   }
@@ -231,7 +250,13 @@
       display: none;
     }
   }
+  &_rus {
+    @media ($media-mw3){
+      display: none;
+    }
+  }
 }
+// -------------------------------------input-------------------------------------
 .link {
   display: flex;
   align-items: center;
@@ -306,6 +331,7 @@
   &__link{
   }
 }
+// -------------------------------------interplay-------------------------------------
 .interplay {
   display: flex;
   justify-content: space-between;

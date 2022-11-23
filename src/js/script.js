@@ -1,14 +1,23 @@
 "use strict"
 
+// для сборки GULP:
 import isWebp from './modules/is_webp_for_css.js';
 isWebp();
 
-const menuButton = document.getElementById('menu-btn');
-const menuNav = document.getElementById('menu-nav');
-
-const addActiveClass = () => {
-  menuNav.classList.toggle('active');
-  console.log('сработал');
+const activeClass = (el) => {
+  el.classList.toggle('active');
 }
 
-menuButton.addEventListener('click', addActiveClass);
+// бургер меню
+const menuButton = document.getElementById('menu-btn');
+const menuNav = document.getElementById('menu-nav');
+const addActiveForNav = () => {
+  activeClass(menuNav);
+  activeClass(menuButton);
+}
+menuButton.addEventListener('click', addActiveForNav);
+
+// перенос корзины
+const basket = document.getElementById('basket');
+const phonesBlock = document.getElementById('phones-block');
+// phonesBlock.append(basket);

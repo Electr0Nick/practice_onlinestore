@@ -286,7 +286,8 @@ body {
     -ms-flex-align: center;
     align-items: center;
     height: 60px;
-    padding-bottom: 0
+    padding-bottom: 0;
+    border-radius: 0
   }
 }
 .header__downblock {
@@ -325,7 +326,38 @@ body {
   justify-content: space-between;
   width: 30px;
   height: 18px;
-  cursor: pointer
+  cursor: pointer;
+  overflow: hidden
+}
+.menu__icon.active {
+  width: 24px;
+  height: 24px;
+  -webkit-transform: translate(3px);
+  -ms-transform: translate(3px);
+  transform: translate(3px)
+}
+.menu__icon.active .menu__iconline:first-child {
+  width: 40px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transform-origin: 3px -3px 0;
+  -ms-transform-origin: 3px -3px 0;
+  transform-origin: 3px -3px 0
+}
+.menu__icon.active .menu__iconline:nth-child(2) {
+  -webkit-transform: translate(-100%);
+  -ms-transform: translate(-100%);
+  transform: translate(-100%)
+}
+.menu__icon.active .menu__iconline:last-child {
+  width: 40px;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 2px 3px 0;
+  -ms-transform-origin: 2px 3px 0;
+  transform-origin: 2px 3px 0
 }
 @media (max-width:768px) {
   .menu__icon {
@@ -337,7 +369,10 @@ body {
 .menu__iconline {
   width: 100%;
   height: 2px;
-  background-color: #fff
+  background-color: #fff;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
 }
 .navigation {
   height: 100%
@@ -346,21 +381,17 @@ body {
   .navigation {
     position: fixed;
     z-index: 5;
-    top: -100%;
-    left: 0;
-    width: 100%;
+    top: 60px;
+    left: -100%;
+    width: 300px;
     height: 100%;
-    background-color: rgba(0,0,0,.8)
-  }
-  .navigation::before {
-    display: block;
-    content: "";
-    width: 100%;
-    height: 60px;
-    background-color: #009baf
+    background-color: rgba(7,140,158,.7);
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s
   }
   .navigation.active {
-    top: 0
+    left: 0
   }
 }
 .navigation__list {
@@ -508,6 +539,11 @@ body {
     justify-content: flex-end
   }
 }
+@media (max-width:768px) {
+  .phones {
+    padding: 0 15px 0 0
+  }
+}
 .phones__icon {
   font-size: 35px;
   line-height: 25px
@@ -550,6 +586,11 @@ body {
 }
 @media (max-width:900px) {
   .phonesblock_msk {
+    display: none
+  }
+}
+@media (max-width:768px) {
+  .phonesblock_rus {
     display: none
   }
 }
