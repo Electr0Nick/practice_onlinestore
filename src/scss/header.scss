@@ -1,8 +1,9 @@
 .header {
+  margin-bottom: 5px;
   &__upblock {
     height: 90px;
     background-color: $blue;
-    color: #fff;
+    color: $white;
     @media($media-mw3){
       height: 60px;
     }
@@ -106,7 +107,7 @@
   &__iconline {
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: $white;
     transition: 300ms;
   }
   &__nav {
@@ -161,7 +162,7 @@
   }
   &__link {
     padding: 5px 22px;
-    color: #fff;
+    color: $white;
     font-family: Play, sans-serif;
     font-size: 14px;
     font-weight: 700;
@@ -240,7 +241,7 @@
   &__line {
     width: 1px;
     height: 30px;
-    background-color: #fff;
+    background-color: $white;
     @media ($media-mw1){
       height: 25px;
     }
@@ -419,7 +420,7 @@
     border-radius: 12px;
     padding: 4px 8px;
     background-color: $orange;
-    color: #fff;
+    color: $white;
     font-family: Roboto, sans-serif;
     font-size: 16px;
     line-height: 16px;

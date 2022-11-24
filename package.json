@@ -27,6 +27,7 @@
     "gulp-clean-css": "latest",
     "gulp-file-include": "latest",
     "gulp-fonter": "latest",
+    "gulp-group-css-media-queries": "latest",
     "gulp-imagemin": "latest",
     "gulp-newer": "latest",
     "gulp-notify": "latest",

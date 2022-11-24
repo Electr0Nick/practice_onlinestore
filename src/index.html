@@ -2,23 +2,31 @@
 <html lang="ru">
 
 @@include('html/head.html', {
-    "title": "SportStore"
+"title": "SportStore"
 })
 
 <body>
-    <div class="wrapper">
+  <div class="wrapper">
 
-        @@include('html/header.html')
+    @@include('html/header.html')
 
-        <main>
+    <main class="main">
+      <div class="main__container container">
+        <div class="main__leftside">
 
-        </main>
+          @@include('html/catalogbar.html')
 
-        @@include('./html/footer.html')
+        </div>
+        <div class="main__rightside">
+        </div>
+      </div>
+    </main>
 
-    </div>
-    
-    <script src="js/script.min.js"></script>
+    @@include('html/footer.html')
+
+  </div>
+
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
