@@ -627,12 +627,7 @@ body {
   padding-bottom: 8px
 }
 .catalogbar__item {
-  width: 100%;
-  height: 40px;
-  border-bottom: 1px solid #1ab9ce
-}
-.catalogbar__item:last-child {
-  border-bottom: none
+  width: 100%
 }
 .catalogbar__link {
   display: -webkit-box;
@@ -642,11 +637,16 @@ body {
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  height: 100%;
+  height: 40px;
   padding-left: 20px;
+  border-bottom: 1px solid #1ab9ce;
   font-family: Roboto,sans-serif;
   font-size: 12px;
-  font-weight: 300
+  font-weight: 300;
+  cursor: pointer
+}
+.catalogbar__link_hiden {
+  padding-left: 50px
 }
 .catalogbar__link:hover {
   background-color: #068292
