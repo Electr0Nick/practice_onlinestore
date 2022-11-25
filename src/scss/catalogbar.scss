@@ -1,7 +1,7 @@
 .catalogbar {
   width: 100%;
-  color: $white;
-  background-color: $blue;
+  color: $text_color;
+  background-color: $main_color;
   &__head {
     display: flex;
     justify-content: space-between;
@@ -23,21 +23,39 @@
     gap: 5px;
     width: 36px;
     height: 36px;
-    background-color: $dark-blue;
+    background-color: $main_color_dark;
     cursor: pointer;
   }
   &__btnline {
     width: 24px;
     height: 2px;
-    background-color: $white;
+    background-color: $text_color;
   }
   &__body {
+    display: none;
     padding-bottom: 8px;
+    transition: 300px;
+    &.active {
+      display: block;
+
+    }
   }
   &__list {
+    &_hiden {
+      display: none;
+      transition: 200ms;
+      &.active {
+        display: block;
+      }
+    }
   }
   &__item {
     width: 100%;
+    &:last-child .catalogbar__link {
+      border-bottom: none;
+    }
+    &_menu {
+    }
   }
   &__link {
     display: flex;
@@ -45,19 +63,33 @@
     width: 100%;
     height: 40px;
     padding-left: 20px;
-    border-bottom: 1px solid $light-blue;
+    border-bottom: 1px solid $main_color_light;
     font-family: Roboto, sans-serif;
     font-size: 12px;
     font-weight: 300;
     cursor: pointer;
+    &_menu {
+      position: relative;
+      &::before {
+        position: absolute;
+        right: 10px;
+        font-size: 16px;
+        transition: 300ms;
+      }
+      &.active::before {
+        transform: rotate(90deg);
+      }
+    }
     &_hiden {
       padding-left: 50px;
+      background-color: $main_color_pale;
+      &::before {
+        margin-right: 8px;
+        font-size: 9px;
+      }
     }
     &:hover {
-      background-color: $dark-blue;
+      background-color: $main_color_dark;
     }
-  }
-  &__hidenlist {
-    
   }
 }

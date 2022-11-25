@@ -157,6 +157,9 @@ legend {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
+.icon-enterarrow:before {
+  content: "\e90e"
+}
 .icon-angles:before {
   content: "\e900"
 }
@@ -569,7 +572,7 @@ body {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 70%;
   flex: 1 0 70%;
-  border: 1px solid #000;
+  border: 1px solid #d3d3d3;
   min-height: 100vh
 }
 .catalogbar {
@@ -624,10 +627,29 @@ body {
   background-color: #fff
 }
 .catalogbar__body {
-  padding-bottom: 8px
+  display: none;
+  padding-bottom: 8px;
+  -webkit-transition: 300px;
+  -o-transition: 300px;
+  transition: 300px
+}
+.catalogbar__body.active {
+  display: block
+}
+.catalogbar__list_hiden {
+  display: none;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s
+}
+.catalogbar__list_hiden.active {
+  display: block
 }
 .catalogbar__item {
   width: 100%
+}
+.catalogbar__item:last-child .catalogbar__link {
+  border-bottom: none
 }
 .catalogbar__link {
   display: -webkit-box;
@@ -645,8 +667,29 @@ body {
   font-weight: 300;
   cursor: pointer
 }
+.catalogbar__link_menu {
+  position: relative
+}
+.catalogbar__link_menu::before {
+  position: absolute;
+  right: 10px;
+  font-size: 16px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s
+}
+.catalogbar__link_menu.active::before {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg)
+}
 .catalogbar__link_hiden {
-  padding-left: 50px
+  padding-left: 50px;
+  background-color: #00abc2
+}
+.catalogbar__link_hiden::before {
+  margin-right: 8px;
+  font-size: 9px
 }
 .catalogbar__link:hover {
   background-color: #068292

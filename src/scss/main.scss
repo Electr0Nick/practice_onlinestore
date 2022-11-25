@@ -8,13 +8,13 @@
   
   &__leftside {
     flex: 0 0 23%;
-
+    
     min-height: 100vh;// temp
   }
-
+  
   &__rightside {
     flex: 1 0 70%;
-    border: 1px solid #000;
+    border: 1px solid lightgray;
 
     min-height: 100vh;// temp
   }

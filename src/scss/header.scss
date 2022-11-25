@@ -2,8 +2,8 @@
   margin-bottom: 5px;
   &__upblock {
     height: 90px;
-    background-color: $blue;
-    color: $white;
+    background-color: $main_color;
+    color: $text_color;
     @media($media-mw3){
       height: 60px;
     }
@@ -28,7 +28,7 @@
     height: 130px;
     padding-bottom: 40px;
     border-radius: 0% 0% 50% 50% / 0% 0% 45% 45%;
-    background-color: $blue;
+    background-color: $main_color;
     @media($media-mw3){
       align-items: center;
       height: 60px;
@@ -107,7 +107,7 @@
   &__iconline {
     width: 100%;
     height: 2px;
-    background-color: $white;
+    background-color: $text_color;
     transition: 300ms;
   }
   &__nav {
@@ -148,10 +148,10 @@
     align-self: flex-start;
     margin-right: 5px;
     border-radius: 14px;
-    background-color: $blue;
+    background-color: $main_color;
     transition: 300ms;
     &:hover {
-      background-color: $dark-blue;
+      background-color: $main_color_dark;
     }
     @media($media-mw3){
       background-color: transparent;
@@ -162,7 +162,7 @@
   }
   &__link {
     padding: 5px 22px;
-    color: $white;
+    color: $text_color;
     font-family: Play, sans-serif;
     font-size: 14px;
     font-weight: 700;
@@ -241,7 +241,7 @@
   &__line {
     width: 1px;
     height: 30px;
-    background-color: $white;
+    background-color: $text_color;
     @media ($media-mw1){
       height: 25px;
     }
@@ -288,7 +288,7 @@
     gap: 5px;
   }
   &__icon {
-    color: $grey_text;
+    color: $text_color_dark;
     font-size: 22px;
     line-height: 0;
     transition: 200ms;
@@ -300,23 +300,23 @@
     }
   }
   &__text {
-    color: $grey_text;
+    color: $text_color_dark;
     font-family: Roboto, sans-serif;
     font-size: 14px;
     font-weight: 400;
     transition: 200ms;
-    border-bottom: 1px dashed $grey_text;
+    border-bottom: 1px dashed $text_color_dark;
     @media ($media-mw1){
       font-size: 12px;
     }
   }
   &:hover {
     .link__icon {
-      color: $light-blue;
+      color: $main_color_light;
     }
     .link__text {
-      color: $light-blue;
-      border-bottom:  1px dashed $light-blue;
+      color: $main_color_light;
+      border-bottom:  1px dashed $main_color_light;
     }
   }
   &_email {
@@ -333,11 +333,11 @@
       }
     }
     .link__text {
-      border-bottom: 1px solid $grey_text;
+      border-bottom: 1px solid $text_color_dark;
     }
     &:hover {
       .link__text {
-        border-bottom:  1px solid $light-blue;
+        border-bottom:  1px solid $main_color_light;
       }
     }
   }
@@ -419,8 +419,8 @@
     left: 28px;
     border-radius: 12px;
     padding: 4px 8px;
-    background-color: $orange;
-    color: $white;
+    background-color: $element_color;
+    color: $text_color;
     font-family: Roboto, sans-serif;
     font-size: 16px;
     line-height: 16px;
@@ -448,7 +448,7 @@
     gap: 4px;
   }
   &__icon {
-    color: $grey_text;
+    color: $text_color_dark;
     font-size: 28px;
     line-height: 0;
     @media ($media-mw1){
@@ -459,7 +459,7 @@
     }
   }
   &__text {
-    color: $grey_text;
+    color: $text_color_dark;
     @media ($media-mw1){
       font-size: 9px;
     }

@@ -1,6 +1,25 @@
+$icomoon-font-family: "icons" !default;
+$icomoon-font-path: "fonts" !default;
+
+$icon-enterarrow: "\e90e";
+$icon-angles: "\e900";
+$icon-arrow: "\e901";
+$icon-basket: "\e902";
+$icon-calendar: "\e903";
+$icon-email: "\e904";
+$icon-facebook: "\e905";
+$icon-instagram: "\e906";
+$icon-keycircul: "\e907";
+$icon-magnifier: "\e908";
+$icon-phone: "\e909";
+$icon-phonearrow: "\e90a";
+$icon-profile: "\e90b";
+$icon-telegram: "\e90c";
+$icon-vk: "\e90d";
+
 [class^="icon-"]::before, [class*=" icon-"]::before {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icons' !important;
+  font-family: '#{$icomoon-font-family}' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -13,45 +32,78 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-angles:before {
-  content: "\e900";
+.icon-enterarrow {
+  &:before {
+    content: $icon-enterarrow; 
+  }
 }
-.icon-arrow:before {
-  content: "\e901";
+.icon-angles {
+  &:before {
+    content: $icon-angles; 
+  }
 }
-.icon-basket:before {
-  content: "\e902";
+.icon-arrow {
+  &:before {
+    content: $icon-arrow; 
+  }
 }
-.icon-calendar:before {
-  content: "\e903";
+.icon-basket {
+  &:before {
+    content: $icon-basket; 
+  }
 }
-.icon-email:before {
-  content: "\e904";
+.icon-calendar {
+  &:before {
+    content: $icon-calendar; 
+  }
 }
-.icon-facebook:before {
-  content: "\e905";
+.icon-email {
+  &:before {
+    content: $icon-email; 
+  }
 }
-.icon-instagram:before {
-  content: "\e906";
+.icon-facebook {
+  &:before {
+    content: $icon-facebook; 
+  }
 }
-.icon-keycircul:before {
-  content: "\e907";
+.icon-instagram {
+  &:before {
+    content: $icon-instagram; 
+  }
 }
-.icon-magnifier:before {
-  content: "\e908";
+.icon-keycircul {
+  &:before {
+    content: $icon-keycircul; 
+  }
 }
-.icon-phone:before {
-  content: "\e909";
+.icon-magnifier {
+  &:before {
+    content: $icon-magnifier; 
+  }
 }
-.icon-phonearrow:before {
-  content: "\e90a";
+.icon-phone {
+  &:before {
+    content: $icon-phone; 
+  }
 }
-.icon-profile:before {
-  content: "\e90b";
+.icon-phonearrow {
+  &:before {
+    content: $icon-phonearrow; 
+  }
 }
-.icon-telegram:before {
-  content: "\e90c";
+.icon-profile {
+  &:before {
+    content: $icon-profile; 
+  }
 }
-.icon-vk:before {
-  content: "\e90d";
+.icon-telegram {
+  &:before {
+    content: $icon-telegram; 
+  }
+}
+.icon-vk {
+  &:before {
+    content: $icon-vk; 
+  }
 }
