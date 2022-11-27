@@ -12,6 +12,7 @@ const activeClass = (el) => {
   el.classList.toggle('active');
 }
 
+
 // бургер меню
 const menuButton = document.getElementById('menu-btn');
 const menuNav = document.getElementById('menu-nav');
@@ -22,39 +23,16 @@ const addActiveForNav = () => {
 menuButton.addEventListener('click', addActiveForNav);
 
 
-// открытие каталог бара
+// плавное открытие каталог бара
 const catalogBar = document.getElementById('ctlg');
 const catalogHead = document.getElementById('ctlg-head');
 const сatalogButton = document.getElementById('ctlg-btn');
-const arrCatalogBarItems = document.querySelectorAll('.catalogbar__list_main > .catalogbar__item');
+const arrCatalogBarLinks = document.querySelectorAll('.catalogbar__link');
 const catalogHeadStyles = getComputedStyle(catalogHead);
-const catalogBarItemStyles = getComputedStyle(arrCatalogBarItems[0]);
-const catalogBarItemHeight = catalogBarItemStyles.height;
-const openCatalogBarHeight = parseInt(catalogHeadStyles.height) + arrCatalogBarItems.length * parseInt(catalogBarItemHeight);
+const catalogBarLinkStyles = getComputedStyle(arrCatalogBarLinks[0]);
+const catalogBarLinkHeight = catalogBarLinkStyles.height;
+const openCatalogBarHeight = parseInt(catalogHeadStyles.height) + arrCatalogBarLinks.length * parseInt(catalogBarLinkHeight);
 const closeCatalogBarHeight = parseInt(catalogHeadStyles.height);
-
-const arrCatalogBarLinksMenu = document.querySelectorAll('.catalogbar__link_menu');
-
-const addActiveForCtlgLinks = (event) => {
-  for (let i = 0; i < arrCatalogBarLinksMenu.length; i++) {
-    arrCatalogBarLinksMenu[i].nextElementSibling.classList.remove('active');
-  }
-  const eventLink = event.target;
-  const hideList = eventLink.nextElementSibling;
-  const hideListElements = eventLink.nextElementSibling.children;
-  const hideListHeight = hideListElements.length * parseInt(catalogBarItemHeight);
-  activeClass(eventLink);
-  activeClass(hideList);
-  if (hideList.classList.contains('active')) {
-    catalogBar.style.height = `${openCatalogBarHeight + hideListHeight}px`;
-  } else {
-    catalogBar.style.height = `${openCatalogBarHeight}px`;
-  }
-}
-for (let i = 0; i < arrCatalogBarLinksMenu.length; i++) {
-  arrCatalogBarLinksMenu[i].addEventListener('click', addActiveForCtlgLinks);
-}
-
 const addActiveForCtlg = () => {
     activeClass(catalogBar);
     if (catalogBar.classList.contains('active')) {

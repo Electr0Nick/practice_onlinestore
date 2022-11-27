@@ -15,6 +15,7 @@
 // $lite-grey_text: #dadada;
 // $dark-grey_text: #666666;
 
+$bg_color: #fff;
 $main_color: #009baf;
 $main_color_pale: #00abc2;
 $main_color_light: #1ab9ce;
@@ -23,10 +24,12 @@ $text_color: #fff;
 $text_color_dark: #999999;
 $element_color: #f68038;
 
-$media-mw1: 'max-width: 1140px';
-$media-mw2: 'max-width: 900px';
-$media-mw3: 'max-width: 768px';
-$media-mw4: 'max-width: 620px';
+$media-mnw1: 'min-width: 992px';
+
+$media-mxw1: 'max-width: 1140px';
+$media-mxw2: 'max-width: 900px';
+$media-mxw3: 'max-width: 768px';
+$media-mxw4: 'max-width: 620px';
 
 // ----------------------------------------------body----------------------------------------------
 body {

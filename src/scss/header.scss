@@ -1,10 +1,12 @@
 .header {
-  margin-bottom: 5px;
+  position: fixed;
+  z-index: 20;
+  width: 100%;
   &__upblock {
     height: 90px;
     background-color: $main_color;
     color: $text_color;
-    @media($media-mw3){
+    @media($media-mxw3){
       height: 60px;
     }
   }
@@ -29,7 +31,7 @@
     padding-bottom: 40px;
     border-radius: 0% 0% 50% 50% / 0% 0% 45% 45%;
     background-color: $main_color;
-    @media($media-mw3){
+    @media($media-mxw3){
       align-items: center;
       height: 60px;
       padding-bottom: 0;
@@ -43,9 +45,12 @@
   }
   &__downblock {
     height: 70px;
-    padding-bottom: 5px;
-    @media($media-mw3){
+    background-color: $bg_color;
+    @media($media-mxw3){
       height: 40px;
+    }
+    @media($media-mxw4){
+      height: 0;
     }
   }
   &__input {
@@ -57,20 +62,20 @@
 .menu {
   height: 100%;
   padding: 12px 0 20px;
-  @media($media-mw2){
+  @media($media-mxw2){
     padding: 12px 0 16px;
   }
-  @media($media-mw3){
+  @media($media-mxw3){
     display: flex;
     align-items: center;
     padding: 0 0 0 15px;
   }
-  @media($media-mw3){
+  @media($media-mxw3){
     display: flex;
     align-items: center;
     padding: 0 0 0 10px;
   }
-  @media($media-mw4){
+  @media($media-mxw4){
     padding: 0;
   }
   &__icon {
@@ -79,28 +84,23 @@
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
-    height: 18px;
+    height: 30px;
+    padding: 5px 0;
     cursor: pointer;
     overflow: hidden;
     &.active {
-      width: 24px;
-      height: 24px;
-      transform: translate(3px);
       & .menu__iconline:first-child{
-        width: 40px;
-        transform: rotate(45deg);
-        transform-origin: 3px -3px 0;
+        transform: translateY(9px) rotate(45deg);
       }
       & .menu__iconline:nth-child(2){
-        transform: translate(-100%);
+        width: 0;
+        transform: translate(15px);
       }
       & .menu__iconline:last-child{
-        width: 40px;
-        transform: rotate(-45deg);
-        transform-origin: 2px 3px 0;
+        transform: translateY(-9px) rotate(-45deg);
       }
     }
-    @media($media-mw3) {
+    @media($media-mxw3) {
       display: flex;
     }
   }
@@ -108,22 +108,22 @@
     width: 100%;
     height: 2px;
     background-color: $text_color;
-    transition: 300ms;
+    transition: 200ms;
   }
   &__nav {
   }
 }
 .navigation {
   height: 100%;
-  @media($media-mw3){
+  @media($media-mxw3){
     position: fixed;
     z-index: 5;
     top: 60px;
     left: -100%;
     width: 320px;
     height: 100%;
-    background-color: rgba(7, 140, 158, 0.6);
-    transition: 500ms;
+    background-color: rgba(7, 140, 158, 0.75);
+    transition: 300ms;
     &.active {
       left: 0;
     }
@@ -135,10 +135,10 @@
     align-content: space-between;
     flex-wrap: wrap;
     height: 100%;
-    @media($media-mw2){
+    @media($media-mxw2){
       align-content: flex-start;
     }
-    @media($media-mw3){
+    @media($media-mxw3){
       justify-content: flex-start;
       gap: 26px;
       padding: 25px 30px;
@@ -148,15 +148,10 @@
     align-self: flex-start;
     margin-right: 5px;
     border-radius: 14px;
-    background-color: $main_color;
-    transition: 300ms;
-    &:hover {
-      background-color: $main_color_dark;
-    }
-    @media($media-mw3){
-      background-color: transparent;
+    transition: 200ms;
+    @media($media-mnw1){
       &:hover {
-        background-color: transparent;
+        background-color: $main_color_dark;
       }
     }
   }
@@ -168,14 +163,14 @@
     font-weight: 700;
     line-height: 18px;
     text-decoration: underline;
-    @media ($media-mw1){
+    @media ($media-mxw1){
       padding: 5px 15px;
       font-size: 12px;
     }
-    @media ($media-mw2){
+    @media ($media-mxw2){
       padding: 0 10px;
     }
-    @media ($media-mw3){
+    @media ($media-mxw3){
       font-size: 18px;
       padding: 0;
   }
@@ -188,12 +183,12 @@
   align-items: center;
   gap: 5px;
   width: 100%;
-  @media($media-mw3){
+  @media($media-mxw3){
     gap: 2px;
   }
   &__image {
     width: 180px;
-    @media($media-mw3){
+    @media($media-mxw3){
       width: 120px;
     }
   }
@@ -202,7 +197,7 @@
     font-size: 12px;
     font-weight: 300;
     cursor: default;
-    @media($media-mw3){
+    @media($media-mxw3){
       font-size: 10px;
     }
   }
@@ -215,17 +210,17 @@
   gap: 4%;
   flex: 0 0 38%;
   padding: 9px 40px 18px 0;
-  @media ($media-mw1){
+  @media ($media-mxw1){
     flex: 0 0 37%;
     padding: 9px 15px 18px 0;
   }
-  @media ($media-mw2){
+  @media ($media-mxw2){
     justify-content: flex-end;
   }
-  @media ($media-mw3){
+  @media ($media-mxw3){
     padding: 0 10px 0 0;
   }
-  @media ($media-mw4){
+  @media ($media-mxw4){
     gap: 0;
     padding: 0;
   }
@@ -234,7 +229,7 @@
   &__icon {
     font-size: 35px;
     line-height: 25px;
-    @media ($media-mw4) {
+    @media ($media-mxw4) {
       font-size: 27px;
     }
   }
@@ -242,10 +237,10 @@
     width: 1px;
     height: 30px;
     background-color: $text_color;
-    @media ($media-mw1){
+    @media ($media-mxw1){
       height: 25px;
     }
-    @media ($media-mw2){
+    @media ($media-mxw2){
       display: none;
     }
   }
@@ -256,7 +251,7 @@
     font-size: 12px;
     font-weight: 300;
     cursor: default;
-    @media ($media-mw1){
+    @media ($media-mxw1){
       font-size: 11px;
     }
   }
@@ -264,17 +259,17 @@
     font-family: Roboto, sans-serif;
     font-size: 18px;
     font-weight: 900;
-    @media ($media-mw1){
+    @media ($media-mxw1){
       font-size: 14px;
     }
   }
   &_msk {
-    @media ($media-mw2){
+    @media ($media-mxw2){
       display: none;
     }
   }
   &_rus {
-    @media ($media-mw3){
+    @media ($media-mxw3){
       display: none;
     }
   }
@@ -284,7 +279,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  @media ($media-mw1){
+  @media ($media-mxw1){
     gap: 5px;
   }
   &__icon {
@@ -292,10 +287,10 @@
     font-size: 22px;
     line-height: 0;
     transition: 200ms;
-    @media ($media-mw1){
+    @media ($media-mxw1){
       font-size: 20px;
     }
-    @media ($media-mw2){
+    @media ($media-mxw2){
       font-size: 14px;
     }
   }
@@ -306,38 +301,43 @@
     font-weight: 400;
     transition: 200ms;
     border-bottom: 1px dashed $text_color_dark;
-    @media ($media-mw1){
+    @media ($media-mxw1){
       font-size: 12px;
     }
   }
-  &:hover {
-    .link__icon {
+  @media($media-mnw1){
+    &:hover {
       color: $main_color_light;
-    }
-    .link__text {
-      color: $main_color_light;
-      border-bottom:  1px dashed $main_color_light;
+      .link__icon {
+        color: $main_color_light;
+      }
+      .link__text {
+        color: $main_color_light;
+        border-bottom:  1px dashed $main_color_light;
+      }
     }
   }
   &_email {
-    @media($media-mw2){
+    @media($media-mxw2){
       display: none;
     }
-    @media($media-mw3){
+    @media($media-mxw3){
       display: flex;
     }
     .link__icon {
       font-size: 20px;
-      @media ($media-mw3){
+      @media ($media-mxw3){
           font-size: 14px;
       }
     }
     .link__text {
       border-bottom: 1px solid $text_color_dark;
     }
-    &:hover {
-      .link__text {
-        border-bottom:  1px solid $main_color_light;
+    @media($media-mnw1){
+      &:hover {
+        .link__text {
+          border-bottom:  1px solid $main_color_light;
+        }
       }
     }
   }
@@ -349,21 +349,21 @@
   gap: 10%;
   flex: 0 0 37%;
   padding-left: 20px;
-  @media ($media-mw1){
+  @media ($media-mxw1){
     gap: 6%;
     padding-left: 10px;
   }
-  @media($media-mw2){
+  @media($media-mxw2){
     gap: 10%;
     justify-content: flex-start;
   }
-  @media($media-mw3){
+  @media($media-mxw3){
     justify-content: space-between;
     gap: 0;
     flex: 0 0 100%;
     padding: 0 10px;
   }
-  @media($media-mw4){
+  @media($media-mxw4){
     display: none;
   }
   &__link{
@@ -377,24 +377,24 @@
   gap: 8%;
   flex: 0 0 40%;
   padding-right: 35px;
-  @media ($media-mw1){
+  @media ($media-mxw1){
     gap: 5%;
     flex: 0 0 38%;
     padding-right: 10px;
   }
-  @media ($media-mw2){
+  @media ($media-mxw2){
     gap: 10%;
     justify-content: flex-end;
   }
-  @media ($media-mw3){
+  @media ($media-mxw3){
     display: none;
   }
   
   &__link {
-    @media($media-mw2){
+    @media($media-mxw2){
       display: none;
     }
-    @media($media-mw3){
+    @media($media-mxw3){
       display: flex;
     }
   }
@@ -402,7 +402,7 @@
   }
   &__basket {
     position: relative;
-    @media ($media-mw3){
+    @media ($media-mxw3){
       & .basket__circle {
         width: 35px;
         height: 35px;
@@ -425,11 +425,11 @@
     font-size: 16px;
     line-height: 16px;
     font-weight: 700;
-    @media ($media-mw1){
+    @media ($media-mxw1){
       font-size: 12px;
       line-height: 12px;
     }
-    @media ($media-mw3){
+    @media ($media-mxw3){
       top: 0px;
       left: 20px;
       border-radius: 12px;
@@ -444,23 +444,23 @@
   align-items: center;
   gap: 12px;
   cursor: default;
-  @media ($media-mw1){
+  @media ($media-mxw1){
     gap: 4px;
   }
   &__icon {
     color: $text_color_dark;
     font-size: 28px;
     line-height: 0;
-    @media ($media-mw1){
+    @media ($media-mxw1){
       font-size: 24px;
     }
-    @media ($media-mw2){
+    @media ($media-mxw2){
       font-size: 20px;
     }
   }
   &__text {
     color: $text_color_dark;
-    @media ($media-mw1){
+    @media ($media-mxw1){
       font-size: 9px;
     }
   }

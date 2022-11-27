@@ -1,5 +1,11 @@
 .main {
-  
+  margin-top: 165px;
+  @media($media-mxw3){
+    margin-top: 105px;
+  }
+  @media($media-mxw4){
+    margin-top: 65px;
+  }
   &__container {
     display: flex;
     gap: 30px;
@@ -7,12 +13,13 @@
   }
   
   &__leftside {
-    flex: 0 0 23%;
+    overflow: hidden;
+    flex: 0 0 260px;
     min-height: 100vh;// temp
   }
   
   &__rightside {
-    flex: 1 0 70%;
+    flex: 1 1 auto;
     border: 1px solid lightgray;
 
     min-height: 100vh;// temp
