@@ -1,4 +1,6 @@
 <div class="catalogbar" id="ctlg">
+
+  <!-- -------------------------------------head------------------------------------- -->
   <div class="catalogbar__head ctlg-head" id="ctlg-head">
     <h3 class="ctlg-head__title">каталог товаров</h3>
     <div class="ctlg-head__button" id="ctlg-btn">
@@ -7,6 +9,8 @@
       <div class="ctlg-head__btnline"></div>
     </div>
   </div>
+
+  <!-- -------------------------------------body------------------------------------- -->
   <nav class="catalogbar__body ctlg-body">
     <ul class="ctlg-body__list">
       <li><a class="ctlg-body__link ctlg-body__link_menu icon-angles" href="##">Беговые дорожки</a></li>
@@ -14,7 +18,7 @@
       <li><a class="ctlg-body__link" href="##">Велотренажеры</a></li>
       <li><a class="ctlg-body__link" href="##">Гребные тренажеры</a></li>
       <li><a class="ctlg-body__link" href="##">Вибромассажеры</a></li>
-      <li><a class="ctlg-body__link ctlg-body__link_menu icon-angles" href="##">Теннисные столы</a></li>
+      <li><a class="ctlg-body__link ctlg-body__link_menu icon-angles" href="##" id="temp-btn">Теннисные столы</a></li>
       <li><a class="ctlg-body__link" href="##">Баскетбол</a></li>
       <li><a class="ctlg-body__link ctlg-body__link_menu icon-angles" href="##">Массажные кресла</a></li>
       <li><a class="ctlg-body__link ctlg-body__link_menu icon-angles" href="##">Массажные столы</a></li>
@@ -26,35 +30,107 @@
       <li><a class="ctlg-body__link" href="##">Аксессуары</a></li>
     </ul>
   </nav>
+
+  <!-- -------------------------------------panel------------------------------------- -->
   <div class="catalogbar__panel ctlg-panel" id="ctlg-panel">
-    <div class="ctlg-panel__tipes">
-      <ul class="ctlg-panel__list">
-        <li><a class="ctlg-panel__link" href="##">Всепогодный</a></li>
-        <li><a class="ctlg-panel__link" href="##">Для помещений</a></li>
-        <li><a class="ctlg-panel__link" href="##">Профессиональный</a></li>
-        <li><a class="ctlg-panel__link" href="##">Любительский</a></li>
-      </ul>
-    </div>
-    <div class="ctlg-panel__products">
-      <div class="ctlg-panel__product-card product-card">
-        <div class="product-card__labels-block">
-          <div class="product-card__label">товар дня</div>
-        </div>
-        <a class="product-card__link" href="##">
-          <div class="product-card__image"><img src="/img/products/tennis01.png" alt="Тенисный стол"></div>
-          <div class="product-card__title">Donic Indoor Roller 800 Green</div>
-          <div class="product-card__subtitle">Домашний теннисный стол</div>
-        </a>
-        <!-- <div class="product-card__old-price">69 990</div> -->
-        <div class="product-card__footer">
-          <div class="product-card__basket basket">
-            <div class="basket__circle basket__circle_product">
-              <div class="basket__image icon-basket"></div>
-            </div>
+
+    <!-- -------------------------------------panel 1------------------------------------- -->
+    <div class="ctlg-panel__item">
+      <div class="ctlg-panel__tipes">
+        <ul class="ctlg-panel__list">
+          <li><a class="ctlg-panel__link" href="##">Электрические</a></li>
+          <li><a class="ctlg-panel__link" href="##">Механические</a></li>
+          <li><a class="ctlg-panel__link" href="##">Магнитные</a></li>
+          <li><a class="ctlg-panel__link" href="##">Складные и компактные</a></li>
+          <li><a class="ctlg-panel__link" href="##">Детские</a></li>
+        </ul>
+      </div>
+      <div class="ctlg-panel__products">
+        <div class="ctlg-panel__product-card product-card">
+          <div class="product-card__labels-block">
+            <div class="product-card__label product-card__label_new">новинка</div>
           </div>
-          <div class="product-card__price">64 990</div>
+          <a class="product-card__link" href="##">
+            <div class="product-card__image"><img src="/img/products/treadmill01.jpg" alt="Тенисный стол"></div>
+            <div class="product-card__title">BH Fitness F1 G6414V</div>
+            <div class="product-card__subtitle">Беговая дорожка</div>
+          </a>
+          <div class="product-card__old-price">69 990</div>
+          <div class="product-card__footer">
+            <a class="product-card__basket basket basket_product" href="##">
+              <div class="basket__circle basket__circle">
+                <div class="basket__image icon-basket"></div>
+              </div>
+            </a>
+            <div class="product-card__price">64 990</div>
+          </div>
         </div>
       </div>
+    </div>
+
+    <!-- -------------------------------------panel 2------------------------------------- -->
+    <!-- <div class="ctlg-panel__item">
+      <div class="ctlg-panel__tipes">
+        <ul class="ctlg-panel__list">
+          <li><a class="ctlg-panel__link" href="##">Магнитные</a></li>
+          <li><a class="ctlg-panel__link" href="##">Электромагнитные</a></li>
+          <li><a class="ctlg-panel__link" href="##">Эргометры</a></li>
+          <li><a class="ctlg-panel__link" href="##">Складные</a></li>
+        </ul>
+      </div>
+      <div class="ctlg-panel__products">
+        <div class="ctlg-panel__product-card product-card">
+          <div class="product-card__labels-block">
+          </div>
+          <a class="product-card__link" href="##">
+            <div class="product-card__image"><img src="/img/products/ellipt01.jpg" alt="Тенисный стол"></div>
+            <div class="product-card__title">Donic Indoor Roller 800 Green</div>
+            <div class="product-card__subtitle">Домашний теннисный стол</div>
+          </a>
+          <div class="product-card__old-price">69 990</div>
+          <div class="product-card__footer">
+            <a class="product-card__basket basket basket_product" href="##">
+              <div class="basket__circle basket__circle">
+                <div class="basket__image icon-basket"></div>
+              </div>
+            </a>
+            <div class="product-card__price">64 990</div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- -------------------------------------panel 3------------------------------------- -->
+    <!-- <div class="ctlg-panel__item">
+      <div class="ctlg-panel__tipes">
+        <ul class="ctlg-panel__list">
+          <li><a class="ctlg-panel__link" href="##">Всепогодный</a></li>
+          <li><a class="ctlg-panel__link" href="##">Для помещений</a></li>
+          <li><a class="ctlg-panel__link" href="##">Профессиональный</a></li>
+          <li><a class="ctlg-panel__link" href="##">Любительский</a></li>
+        </ul>
+      </div>
+      <div class="ctlg-panel__products">
+        <div class="ctlg-panel__product-card product-card">
+          <div class="product-card__labels-block">
+            <div class="product-card__label product-card__label_day">товар дня</div>
+          </div>
+          <a class="product-card__link" href="##">
+            <div class="product-card__image"><img src="/img/products/tennis01.jpg" alt="Тенисный стол"></div>
+            <div class="product-card__title">Donic Indoor Roller 800 Green</div>
+            <div class="product-card__subtitle">Домашний теннисный стол</div>
+          </a>
+          <div class="product-card__footer">
+            <a class="product-card__basket basket basket_product" href="##">
+              <div class="basket__circle basket__circle">
+                <div class="basket__image icon-basket"></div>
+              </div>
+            </a>
+            <div class="product-card__price">64 990</div>
+          </div>
+        </div>
+      </div> -->
+
     </div>
   </div>
 </div>

@@ -1,31 +1,41 @@
 .basket {
   &__circle {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      &_header {
-        width: 44px;
-        height: 44px;
-        background-color: $main_color;
-      }
-      &_product {
-        width: 40px;
-        height: 40px;
-        background-color: $second_color_light;
-      }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
   }
   &__image {
       font-size: 24px;
       line-height: 0;
       color: $main-text_color;
   }
+  &_header {
+    & .basket__circle{
+      width: 44px;
+      height: 44px;
+      background-color: $main_color;
+    }
+  }
+  &_product {
+    & .basket__circle{
+      width: 40px;
+      height: 40px;
+      background-color: $second_color_light;
+      @media ($media-mnw1) {
+        &:hover {
+          background-color: $third_color;
+        }
+      }
+    }
+  }
 }
 .product-card {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 14px 24px;
+  padding: 14px 22px;
+  border: 1px solid $second_color_light;
   overflow: hidden;
   &__labels-block {
     position: absolute;
@@ -37,18 +47,32 @@
     height: 22px;
     padding: 0 16px;
     border-radius: 11px;
-    background-color: $third_color;
     font-size: 14px;
     font-weight: 900;
     line-height: 22px;
     text-transform: uppercase;
     margin-bottom: 5px;
+    &_day {
+      background-color: $main_color_light;
+    }
+    &_new {
+      background-color: $third_color;
+    }
   }
   &__link {
     font-size: 15px;
+    margin-bottom: 25px;
+    @media($media-mnw1){
+      &:hover .product-card__title {
+        text-decoration: underline;
+      }
+      &:hover .product-card__subtitle {
+        text-decoration: underline;
+      }
+    }
   }
   &__image {
-    margin-top: 25px;
+    margin-bottom: 10px;
     & img{
       width: 100%;
     }
@@ -59,7 +83,6 @@
   }
   &__subtitle {
     color: $main_color;
-    margin-bottom: 20px;
   }
   &__old-price {
     align-self: flex-end;

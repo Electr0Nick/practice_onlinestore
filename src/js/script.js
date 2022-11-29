@@ -44,3 +44,17 @@ const addActiveForCtlg = () => {
     }
   }
 сatalogButton.addEventListener('click', addActiveForCtlg);
+
+
+
+
+// temp
+// const tempBtn = document.getElementById('temp-btn');
+// const addActivePanel = () => {
+//   catalogPanel.classList.add('active');
+// }
+// const removeActivePanel = () => {
+//   catalogPanel.classList.remove('active');
+// }
+// tempBtn.addEventListener('mouseover', addActivePanel);
+// tempBtn.addEventListener('mouseout', removeActivePanel);

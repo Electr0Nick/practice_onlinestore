@@ -18,7 +18,8 @@
     z-index: 8;
     top: 0;
     right: 0;
-    right: -260px; //temp
+    right: -260px;
+    transition: 200ms;
     &.active {
       right: -260px;
     }
@@ -91,9 +92,16 @@
   border: 2px solid $main_color;
   border-left: none;
   background-color: $bg_color;
+  &__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $bg_color;
+  }
   &__tipes {
     padding: 12px 0 12px;
-    border-bottom: 2px solid $second_color_light;
     color: $main_color_light;
   }
   &__list {
@@ -111,6 +119,7 @@
     }
   }
   &__products {
+    padding: 2px;
   }
   &__product-card {
   }

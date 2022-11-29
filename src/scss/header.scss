@@ -79,7 +79,7 @@
     padding: 0;
   }
   &__icon {
-    z-index: 10;
+    z-index: 21;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -116,12 +116,12 @@
   height: 100%;
   @media($media-mxw3){
     position: fixed;
-    z-index: 5;
+    z-index: 19;
     top: 60px;
     left: -100%;
     width: 320px;
     height: 100%;
-    background-color: rgba(7, 140, 158, 0.75);
+    background-color: rgba(7, 140, 158, 0.9);
     transition: 300ms;
     &.active {
       left: 0;
