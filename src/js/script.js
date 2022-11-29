@@ -26,13 +26,15 @@ menuButton.addEventListener('click', addActiveForNav);
 // плавное открытие каталог бара
 const catalogBar = document.getElementById('ctlg');
 const catalogHead = document.getElementById('ctlg-head');
+const catalogPanel = document.getElementById('ctlg-panel');
 const сatalogButton = document.getElementById('ctlg-btn');
-const arrCatalogBarLinks = document.querySelectorAll('.catalogbar__link');
+const arrCatalogBarLinks = document.querySelectorAll('.ctlg-body__link');
 const catalogHeadStyles = getComputedStyle(catalogHead);
 const catalogBarLinkStyles = getComputedStyle(arrCatalogBarLinks[0]);
 const catalogBarLinkHeight = catalogBarLinkStyles.height;
 const openCatalogBarHeight = parseInt(catalogHeadStyles.height) + arrCatalogBarLinks.length * parseInt(catalogBarLinkHeight);
 const closeCatalogBarHeight = parseInt(catalogHeadStyles.height);
+catalogPanel.style.height = `${openCatalogBarHeight}px`;
 const addActiveForCtlg = () => {
     activeClass(catalogBar);
     if (catalogBar.classList.contains('active')) {

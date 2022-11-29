@@ -10,10 +10,10 @@
     display: flex;
     gap: 30px;
     border: 1px solid lightgray;
+    overflow: hidden;
   }
   
   &__leftside {
-    overflow: hidden;
     flex: 0 0 260px;
     min-height: 100vh;// temp
   }

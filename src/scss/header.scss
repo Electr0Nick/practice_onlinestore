@@ -2,10 +2,10 @@
   position: fixed;
   z-index: 20;
   width: 100%;
-  &__upblock {
+  &__up-block {
     height: 90px;
     background-color: $main_color;
-    color: $text_color;
+    color: $main-text_color;
     @media($media-mxw3){
       height: 60px;
     }
@@ -19,7 +19,7 @@
   &__menu {
     flex: 0 0 37%;
   }
-  &__centerelement {
+  &__center-element {
     position: absolute;
     top: 0;
     left: 50%;
@@ -43,7 +43,7 @@
   }
   &__phones {
   }
-  &__downblock {
+  &__down-block {
     height: 70px;
     background-color: $bg_color;
     @media($media-mxw3){
@@ -104,10 +104,9 @@
       display: flex;
     }
   }
-  &__iconline {
+  &__icon-line {
     width: 100%;
     height: 2px;
-    background-color: $text_color;
     transition: 200ms;
   }
   &__nav {
@@ -157,7 +156,6 @@
   }
   &__link {
     padding: 5px 22px;
-    color: $text_color;
     font-family: Play, sans-serif;
     font-size: 14px;
     font-weight: 700;
@@ -193,7 +191,6 @@
     }
   }
   &__text {
-    font-family: Roboto, sans-serif;
     font-size: 12px;
     font-weight: 300;
     cursor: default;
@@ -236,7 +233,7 @@
   &__line {
     width: 1px;
     height: 30px;
-    background-color: $text_color;
+    background-color: $main-text_color;
     @media ($media-mxw1){
       height: 25px;
     }
@@ -245,9 +242,8 @@
     }
   }
 }
-.phonesblock {
+.phones-block {
   &__location {
-    font-family: Roboto, sans-serif;
     font-size: 12px;
     font-weight: 300;
     cursor: default;
@@ -256,7 +252,6 @@
     }
   }
   &__number {
-    font-family: Roboto, sans-serif;
     font-size: 18px;
     font-weight: 900;
     @media ($media-mxw1){
@@ -283,7 +278,7 @@
     gap: 5px;
   }
   &__icon {
-    color: $text_color_dark;
+    color: $second_color_dark;
     font-size: 22px;
     line-height: 0;
     transition: 200ms;
@@ -295,12 +290,11 @@
     }
   }
   &__text {
-    color: $text_color_dark;
-    font-family: Roboto, sans-serif;
+    color: $second_color_dark;
     font-size: 14px;
     font-weight: 400;
     transition: 200ms;
-    border-bottom: 1px dashed $text_color_dark;
+    border-bottom: 1px dashed $second_color_dark;
     @media ($media-mxw1){
       font-size: 12px;
     }
@@ -331,7 +325,7 @@
       }
     }
     .link__text {
-      border-bottom: 1px solid $text_color_dark;
+      border-bottom: 1px solid $second_color_dark;
     }
     @media($media-mnw1){
       &:hover {
@@ -419,9 +413,8 @@
     left: 28px;
     border-radius: 12px;
     padding: 4px 8px;
-    background-color: $element_color;
-    color: $text_color;
-    font-family: Roboto, sans-serif;
+    background-color: $third_color;
+    color: $main-text_color;
     font-size: 16px;
     line-height: 16px;
     font-weight: 700;
@@ -448,7 +441,7 @@
     gap: 4px;
   }
   &__icon {
-    color: $text_color_dark;
+    color: $second_color_dark;
     font-size: 28px;
     line-height: 0;
     @media ($media-mxw1){
@@ -459,7 +452,7 @@
     }
   }
   &__text {
-    color: $text_color_dark;
+    color: $second_color_dark;
     @media ($media-mxw1){
       font-size: 9px;
     }
