@@ -271,7 +271,8 @@ body {
   flex-direction: column;
   -webkit-box-align: start;
   -ms-flex-align: start;
-  align-items: flex-start
+  align-items: flex-start;
+  cursor: default
 }
 .product-card__label {
   height: 22px;
@@ -279,7 +280,7 @@ body {
   border-radius: 11px;
   font-size: 14px;
   font-weight: 900;
-  line-height: 22px;
+  line-height: 24px;
   text-transform: uppercase;
   margin-bottom: 5px
 }
@@ -311,7 +312,8 @@ body {
   align-self: flex-end;
   font-size: 18px;
   text-decoration-line: line-through;
-  color: #999
+  color: #999;
+  cursor: default
 }
 .product-card__old-price::after {
   content: " ₽";
@@ -331,7 +333,8 @@ body {
 .product-card__price {
   font-size: 24px;
   font-weight: 900;
-  color: #000
+  color: #000;
+  cursor: default
 }
 .product-card__price::after {
   content: " ₽";
@@ -405,18 +408,18 @@ body {
   cursor: pointer;
   overflow: hidden
 }
-.menu__icon.active .menu__iconline:first-child {
+.menu__icon.active .menu__icon-line:first-child {
   -webkit-transform: translateY(9px) rotate(45deg);
   -ms-transform: translateY(9px) rotate(45deg);
   transform: translateY(9px) rotate(45deg)
 }
-.menu__icon.active .menu__iconline:nth-child(2) {
+.menu__icon.active .menu__icon-line:nth-child(2) {
   width: 0;
   -webkit-transform: translate(15px);
   -ms-transform: translate(15px);
   transform: translate(15px)
 }
-.menu__icon.active .menu__iconline:last-child {
+.menu__icon.active .menu__icon-line:last-child {
   -webkit-transform: translateY(-9px) rotate(-45deg);
   -ms-transform: translateY(-9px) rotate(-45deg);
   transform: translateY(-9px) rotate(-45deg)
@@ -426,7 +429,8 @@ body {
   height: 2px;
   -webkit-transition: .2s;
   -o-transition: .2s;
-  transition: .2s
+  transition: .2s;
+  background-color: #fff
 }
 .navigation {
   height: 100%
@@ -648,7 +652,6 @@ body {
 .catalogbar {
   position: relative;
   width: 100%;
-  height: 100px;
   color: #fff;
   -webkit-transition: .2s;
   -o-transition: .2s;
@@ -662,19 +665,6 @@ body {
   position: absolute;
   z-index: 9;
   bottom: 0
-}
-.catalogbar__panel {
-  position: absolute;
-  z-index: 8;
-  top: 0;
-  right: 0;
-  right: -260px;
-  -webkit-transition: .2s;
-  -o-transition: .2s;
-  transition: .2s
-}
-.catalogbar__panel.active {
-  right: -260px
 }
 .ctlg-head {
   display: -webkit-box;
@@ -728,6 +718,19 @@ body {
   width: 100%;
   background-color: #009baf
 }
+.ctlg-body__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  height: 100%
+}
 .ctlg-body__link {
   width: 100%;
   height: 40px;
@@ -750,19 +753,32 @@ body {
   -o-transition: .3s;
   transition: .3s
 }
+.ctlg-body__panel {
+  position: absolute;
+  top: 0;
+  z-index: 7;
+  left: 100%
+}
 .ctlg-panel {
-  width: 260px;
-  border: 2px solid #009baf;
-  border-left: none;
-  background-color: #fff
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none
 }
 .ctlg-panel__item {
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background-color: #fff
+  border: 2px solid #009baf;
+  border-left: none;
+  background-color: #fff;
+  -webkit-transform: translate(-100%,0);
+  -ms-transform: translate(-100%,0);
+  transform: translate(-100%,0);
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s
 }
 .ctlg-panel__tipes {
   padding: 12px 0 12px;
@@ -776,6 +792,15 @@ body {
 }
 .ctlg-panel__products {
   padding: 2px
+}
+.ctlg-panel.active {
+  pointer-events: auto;
+  z-index: 8
+}
+.ctlg-panel.active .ctlg-panel__item {
+  -webkit-transform: translate(0,0);
+  -ms-transform: translate(0,0);
+  transform: translate(0,0)
 }
 @media (min-width:992px) {
   .basket_product .basket__circle:hover {

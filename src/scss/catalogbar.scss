@@ -1,7 +1,6 @@
 .catalogbar {
   position: relative;
   width: 100%;
-  height: 100px;
   color: $main-text_color;
   transition: 200ms;
   &__head {
@@ -12,17 +11,6 @@
     position: absolute;
     z-index: 9;
     bottom: 0;
-  }
-  &__panel {
-    position: absolute;
-    z-index: 8;
-    top: 0;
-    right: 0;
-    right: -260px;
-    transition: 200ms;
-    &.active {
-      right: -260px;
-    }
   }
 }
 .ctlg-head {
@@ -60,6 +48,12 @@
   width: 100%;
   background-color: $main_color;
   &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+  }
+  &__menu { 
   }
   &__link {
     width: 100%;
@@ -86,19 +80,28 @@
       }
     }
   }
+  &__panel{
+    position: absolute;
+    top: 0;
+    z-index: 7;
+    left: 100%;
+  }
 }
 .ctlg-panel {
-  width: 260px;
-  border: 2px solid $main_color;
-  border-left: none;
-  background-color: $bg_color;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
   &__item {
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    border: 2px solid $main_color;
+    border-left: none;
     background-color: $bg_color;
+    transform: translate(-100%, 0);
+    transition: 200ms;
   }
   &__tipes {
     padding: 12px 0 12px;
@@ -122,5 +125,12 @@
     padding: 2px;
   }
   &__product-card {
+  }
+  &.active {
+    pointer-events: auto;
+    z-index: 8;
+    & .ctlg-panel__item {
+      transform: translate(0, 0);
+    }
   }
 }

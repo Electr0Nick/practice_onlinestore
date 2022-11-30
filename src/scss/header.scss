@@ -89,14 +89,14 @@
     cursor: pointer;
     overflow: hidden;
     &.active {
-      & .menu__iconline:first-child{
+      & .menu__icon-line:first-child{
         transform: translateY(9px) rotate(45deg);
       }
-      & .menu__iconline:nth-child(2){
+      & .menu__icon-line:nth-child(2){
         width: 0;
         transform: translate(15px);
       }
-      & .menu__iconline:last-child{
+      & .menu__icon-line:last-child{
         transform: translateY(-9px) rotate(-45deg);
       }
     }
@@ -108,6 +108,7 @@
     width: 100%;
     height: 2px;
     transition: 200ms;
+    background-color: $main-text_color;
   }
   &__nav {
   }

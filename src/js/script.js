@@ -1,9 +1,9 @@
 "use strict"
 
-// для сборки GULP:
+// для сборки GULP: ------------------------------------- --------------------------------------
 import isWebp from './modules/is_webp_for_css.js';
 isWebp();
-// для динамического адаптива
+// для динамического адаптива ------------------------------------- ----------------------------
 import { useDynamicAdapt } from './modules/dynamicAdapt.js'
 useDynamicAdapt();
 
@@ -13,7 +13,7 @@ const activeClass = (el) => {
 }
 
 
-// бургер меню
+// бургер меню ------------------------------------- --------------------------------------- --
 const menuButton = document.getElementById('menu-btn');
 const menuNav = document.getElementById('menu-nav');
 const addActiveForNav = () => {
@@ -23,18 +23,17 @@ const addActiveForNav = () => {
 menuButton.addEventListener('click', addActiveForNav);
 
 
-// плавное открытие каталог бара
+// плавное открытие каталог бара ------------------------------------- -------------------------
 const catalogBar = document.getElementById('ctlg');
 const catalogHead = document.getElementById('ctlg-head');
-const catalogPanel = document.getElementById('ctlg-panel');
-const сatalogButton = document.getElementById('ctlg-btn');
-const arrCatalogBarLinks = document.querySelectorAll('.ctlg-body__link');
 const catalogHeadStyles = getComputedStyle(catalogHead);
+const сatalogButton = document.getElementById('ctlg-btn');
+const catalogBody = document.getElementById('ctlg-body');
+const arrCatalogBarLinks = document.querySelectorAll('.ctlg-body__link');
 const catalogBarLinkStyles = getComputedStyle(arrCatalogBarLinks[0]);
-const catalogBarLinkHeight = catalogBarLinkStyles.height;
-const openCatalogBarHeight = parseInt(catalogHeadStyles.height) + arrCatalogBarLinks.length * parseInt(catalogBarLinkHeight);
+const openCatalogBarHeight = parseInt(catalogHeadStyles.height) + arrCatalogBarLinks.length * parseInt(catalogBarLinkStyles.height);
 const closeCatalogBarHeight = parseInt(catalogHeadStyles.height);
-catalogPanel.style.height = `${openCatalogBarHeight}px`;
+catalogBody.style.height = `${openCatalogBarHeight}px`;
 const addActiveForCtlg = () => {
     activeClass(catalogBar);
     if (catalogBar.classList.contains('active')) {
@@ -46,15 +45,15 @@ const addActiveForCtlg = () => {
 сatalogButton.addEventListener('click', addActiveForCtlg);
 
 
-
-
-// temp
-// const tempBtn = document.getElementById('temp-btn');
-// const addActivePanel = () => {
-//   catalogPanel.classList.add('active');
-// }
-// const removeActivePanel = () => {
-//   catalogPanel.classList.remove('active');
-// }
-// tempBtn.addEventListener('mouseover', addActivePanel);
-// tempBtn.addEventListener('mouseout', removeActivePanel);
+// плавное открытие правой панели ------------------------------------- ------------------------
+const arrCatalogBarMenuItems = document.querySelectorAll('.ctlg-body__menu');
+for (let i = 0; i < arrCatalogBarMenuItems.length; i++) {
+  const menuItem = arrCatalogBarMenuItems[i];
+  const itemPanel = menuItem.querySelector('.ctlg-panel');
+  menuItem.addEventListener('mouseenter', function(){
+    itemPanel.classList.add('active');
+  });
+  menuItem.addEventListener('mouseleave', function(){
+    itemPanel.classList.remove('active');
+  });
+}

@@ -42,6 +42,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    cursor: default;
   }
   &__label {
     height: 22px;
@@ -49,7 +50,7 @@
     border-radius: 11px;
     font-size: 14px;
     font-weight: 900;
-    line-height: 22px;
+    line-height: 24px;
     text-transform: uppercase;
     margin-bottom: 5px;
     &_day {
@@ -89,6 +90,7 @@
     font-size: 18px;
     text-decoration-line: line-through;
     color: $second_color_dark;
+    cursor: default;
     &::after {
       content: ' ₽';
       font-size: 12px;
@@ -105,6 +107,7 @@
     font-size: 24px;
     font-weight: 900;
     color: $second_color_black;
+    cursor: default;
     &::after {
       content: ' ₽';
       font-size: 18px;
