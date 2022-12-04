@@ -31,6 +31,7 @@ export const path = {
     files: `${srcFolder}/files/**/*.*`,
   },
   clean: buildFolder,
+  cleanmaps: `${buildFolder}/maps`,
   buildFolder: buildFolder,
   srcFolder: srcFolder,
   rootFolder: rootFolder,

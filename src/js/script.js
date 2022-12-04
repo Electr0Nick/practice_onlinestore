@@ -23,7 +23,7 @@ const addActiveForNav = () => {
 menuButton.addEventListener('click', addActiveForNav);
 
 
-// плавное открытие каталог бара ------------------------------------- -------------------------
+// плавное открытие каталог-бара ------------------------------------- -------------------------
 const catalogBar = document.getElementById('ctlg');
 const catalogHead = document.getElementById('ctlg-head');
 const catalogHeadStyles = getComputedStyle(catalogHead);
@@ -45,7 +45,7 @@ const addActiveForCtlg = () => {
 сatalogButton.addEventListener('click', addActiveForCtlg);
 
 
-// плавное открытие правой панели ------------------------------------- ------------------------
+// плавное открытие правой панели каталог-бара ------------------------------------- ------------------------
 const arrCatalogBarMenuItems = document.querySelectorAll('.ctlg-body__menu');
 for (let i = 0; i < arrCatalogBarMenuItems.length; i++) {
   const menuItem = arrCatalogBarMenuItems[i];
@@ -56,4 +56,35 @@ for (let i = 0; i < arrCatalogBarMenuItems.length; i++) {
   menuItem.addEventListener('mouseleave', function(){
     itemPanel.classList.remove('active');
   });
+}
+
+
+// плавное открытие списка категорий поиска ------------------------------------- --------------------------------------- --
+const searchOptions = document.getElementById('srch-options');
+const searchArrows = document.getElementById('srch-arrows');
+const searchList = document.getElementById('srch-list');
+const addActiveForSearchList = () => {
+  activeClass(searchList);
+  activeClass(searchArrows);
+}
+searchOptions.addEventListener('click', addActiveForSearchList);
+
+
+// плавное открытие списка категорий поиска ------------------------------------- --------------------------------------- --
+const searchCategories = document.getElementById('srch-categories');
+const arrSearchCheckboxes = document.querySelectorAll('.search-block__checkbox');
+
+const addAmountOfCategories = () => {
+  const counter = 0;
+  for (let i = 0; i < arrSearchCheckboxes.length; i++) {
+    if (arrSearchCheckboxes[i].checked) { // ?????????????????????????????????
+      counter++;
+    }
+  }
+  console.log('bam');
+  console.log(counter);
+}
+for (let i = 0; i < arrSearchCheckboxes.length; i++) {
+  const checkbox = arrSearchCheckboxes[i];
+  checkbox.addEventListener('click', addAmountOfCategories)
 }

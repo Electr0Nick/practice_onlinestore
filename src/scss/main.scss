@@ -9,18 +9,17 @@
   &__container {
     display: flex;
     gap: 30px;
-    border: 1px solid lightgray;
     overflow: hidden;
   }
   
   &__leftside {
     flex: 0 0 260px;
+
     min-height: 100vh;// temp
   }
   
   &__rightside {
     flex: 1 1 auto;
-    border: 1px solid lightgray;
 
     min-height: 100vh;// temp
   }

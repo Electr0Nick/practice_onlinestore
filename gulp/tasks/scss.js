@@ -9,7 +9,8 @@ import mediaQueries from 'gulp-group-css-media-queries';
 const sass = gulpSass(dartSass);
 
 export const scss = () => {
-  return app.gulp.src(app.path.src.scss, { sourcemaps: true })
+  return app.gulp.src(app.path.src.scss)
+    .pipe(app.plugins.sourcemaps.init())
     // .pipe(app.plugins.plumber(
     //   app.plugins.notify.onError({
     //     title: 'SCSS',
@@ -36,6 +37,7 @@ export const scss = () => {
       suffix: '.min'
     }))
     .pipe(cleanCss())
-    .pipe(app.gulp.dest(app.path.build.css, { sourcemaps:'.'}))
+    .pipe(app.plugins.sourcemaps.write('../maps'))
+    .pipe(app.gulp.dest(app.path.build.css))
     .pipe(app.plugins.browserSync.stream());
 }

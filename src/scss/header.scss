@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  z-index: 20;
+  z-index: 50;
   width: 100%;
   &__up-block {
     height: 90px;
@@ -79,7 +79,7 @@
     padding: 0;
   }
   &__icon {
-    z-index: 21;
+    z-index: 51;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -117,7 +117,7 @@
   height: 100%;
   @media($media-mxw3){
     position: fixed;
-    z-index: 19;
+    z-index: 49;
     top: 60px;
     left: -100%;
     width: 320px;

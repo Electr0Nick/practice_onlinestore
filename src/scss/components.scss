@@ -21,7 +21,7 @@
     & .basket__circle{
       width: 40px;
       height: 40px;
-      background-color: $second_color_light;
+      background-color: $second_color_medium;
       @media ($media-mnw1) {
         &:hover {
           background-color: $third_color;
@@ -35,7 +35,7 @@
   display: flex;
   flex-direction: column;
   padding: 14px 22px;
-  border: 1px solid $second_color_light;
+  border: 1px solid $second_color_medium;
   overflow: hidden;
   &__labels-block {
     position: absolute;

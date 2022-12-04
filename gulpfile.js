@@ -11,6 +11,7 @@ global.app = {
 
 
 import { clean } from './gulp/tasks/clean.js';
+import { cleanmaps } from './gulp/tasks/cleanmaps.js';
 import { server } from './gulp/tasks/server.js';
 import { html } from './gulp/tasks/html.js';
 import { scss } from './gulp/tasks/scss.js';
@@ -34,7 +35,7 @@ const fonts = gulp.series(otf2ttf, ttf2woff, fontsStyle);
 // const mainTasks = gulp.series(fonts, gulp.parallel(html, scss, js, img, copy));
 const mainTasks = gulp.series(fonts, gulp.parallel(html, scss, js, img));
 const dev = gulp.series(clean, mainTasks, gulp.parallel(watcher, server));
-const build = gulp.series(clean, mainTasks, zip);
+const build = gulp.series(clean, mainTasks, cleanmaps, zip);
 
 
 gulp.task('default', dev);

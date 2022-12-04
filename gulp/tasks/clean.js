@@ -1,6 +1,4 @@
-import del from 'del';
-
 export const clean = () => {
-  del(`./${app.path.rootFolder}.zip`);
-  return del(app.path.clean);
+  app.plugins.del(`./${app.path.rootFolder}.zip`);
+  return app.plugins.del(app.path.clean);
 };
