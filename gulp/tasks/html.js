@@ -16,7 +16,7 @@ export const html = () => {
       removeComments: true
     }))
     .pipe(app.plugins.rename({
-      suffix: '.notmin'
+      suffix: '.max'
     }))
     .pipe(app.gulp.dest(app.path.build.html))
     .pipe(htmlmin({

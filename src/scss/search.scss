@@ -10,7 +10,7 @@
     height: 100%;
   }
   &__options {
-    flex: 0 0 15%;
+    flex: 0 0 20%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -47,6 +47,9 @@
     border-top: 2px solid $second_color_light;
     border-bottom: 2px solid $second_color_light;
     background-color: $bg_color;
+    padding: 0 12px;
+    color: $second_color_dark;
+    font-size: 14px;
   }
   &__button {
     flex: 0 0 10%;
@@ -88,5 +91,8 @@
   &__label {
     padding: 3px 10px;
     border-radius: 10px;
+    &:hover {
+      background-color: $second_color_light;
+    }
   }
 }

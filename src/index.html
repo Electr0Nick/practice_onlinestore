@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 @@include('html/head.html', {
 "title": "SportStore"
 })
-
 <body>
   <div class="wrapper">
-
     @@include('html/header.html')
-
     <main class="main">
       <div class="main__container container">
         <aside class="main__leftside">
-
-          @@include('html/catalogbar.html')
-
+          <div class="main__catalogbar">
+            @@include('html/catalogbar.html')
+          </div>
+          <div class="main__news">
+            @@include('html/news.html')
+          </div>
         </aside>
         <div class="main__rightside">
-
           @@include('html/search.html')
-
         </div>
       </div>
     </main>
-
     @@include('html/footer.html')
-
   </div>
 
   <script src="js/script.min.js"></script>
-</body>
 
+</body>
 </html>

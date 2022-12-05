@@ -1,0 +1,57 @@
+.news-block {
+  &__title {
+    margin-bottom: 26px;
+    color: $second_color_medium;
+    font-family: UniSansHeavyCaps, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &__card {
+    margin-bottom: 30px;
+  }
+  &:hover {
+    & .news-block__title {
+      color: $main_color_light;
+    }
+  }
+}
+.card-news {
+  &__title {
+    margin-bottom: 16px;
+    font-weight: 900;
+    line-height: 18px;
+    text-transform: uppercase;
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  &__date {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    color: $second_color_medium;
+  }
+  &__day {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 24px;
+  }
+  &__month {
+    font-size: 18px;
+    line-height: 12px;
+  }
+  &__description {
+    line-height: 18px;
+    color: $second_color_dark;
+  }
+  &:hover {
+    & .card-news__title {
+      color: $third_color;
+    }
+  }
+}

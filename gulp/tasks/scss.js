@@ -37,7 +37,7 @@ export const scss = () => {
       suffix: '.min'
     }))
     .pipe(cleanCss())
-    .pipe(app.plugins.sourcemaps.write('../maps'))
+    .pipe(app.plugins.sourcemaps.write('.'))
     .pipe(app.gulp.dest(app.path.build.css))
     .pipe(app.plugins.browserSync.stream());
 }

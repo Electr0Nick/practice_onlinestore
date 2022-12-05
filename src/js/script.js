@@ -73,16 +73,27 @@ searchOptions.addEventListener('click', addActiveForSearchList);
 // плавное открытие списка категорий поиска ------------------------------------- --------------------------------------- --
 const searchCategories = document.getElementById('srch-categories');
 const arrSearchCheckboxes = document.querySelectorAll('.search-block__checkbox');
-
 const addAmountOfCategories = () => {
-  const counter = 0;
+  let categoryCounterYes = 0;
+  let categoryCounterNo = arrSearchCheckboxes.length;
   for (let i = 0; i < arrSearchCheckboxes.length; i++) {
-    if (arrSearchCheckboxes[i].checked) { // ?????????????????????????????????
-      counter++;
+    if (arrSearchCheckboxes[i].checked) {
+      categoryCounterYes++;
+      categoryCounterNo--;
     }
   }
-  console.log('bam');
-  console.log(counter);
+  if (categoryCounterYes) {
+    if (categoryCounterNo) {
+      searchCategories.innerHTML = `Категорий: ${categoryCounterYes}`;
+      searchCategories.style.color = '#f68038';
+    } else {
+      searchCategories.innerHTML = `Везде`;
+      searchCategories.style.color = '#999999';
+    }
+  } else {
+    searchCategories.innerHTML = `Везде`;
+    searchCategories.style.color = '#999999';
+  }
 }
 for (let i = 0; i < arrSearchCheckboxes.length; i++) {
   const checkbox = arrSearchCheckboxes[i];
