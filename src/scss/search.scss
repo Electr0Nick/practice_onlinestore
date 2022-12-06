@@ -67,7 +67,7 @@
     grid-template-columns: repeat(3, 33%);
     width: 100%;
     padding: 22px 30px 0;
-    border-bottom: 5px solid $third_color;
+    border-bottom: 4px solid $third_color;
     background-color: $bg_color;
     transform: translateY(-102%);
     transition: 300ms;
@@ -77,7 +77,6 @@
   }
   &__item {
     margin-bottom: 22px;
-    color: $second_color_dark;
   }
   &__checkbox {
     display: none;
@@ -91,6 +90,7 @@
   &__label {
     padding: 3px 10px;
     border-radius: 10px;
+    color: $second_color_dark;
     &:hover {
       background-color: $second_color_light;
     }

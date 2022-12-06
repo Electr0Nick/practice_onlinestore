@@ -1,3 +1,9 @@
+.rub {
+  &::after {
+    content: ' ₽';
+  }
+}
+
 .basket {
   &__circle {
     display: flex;
@@ -92,7 +98,6 @@
     color: $second_color_dark;
     cursor: default;
     &::after {
-      content: ' ₽';
       font-size: 12px;
     }
   }
@@ -109,7 +114,6 @@
     color: $second_color_black;
     cursor: default;
     &::after {
-      content: ' ₽';
       font-size: 18px;
     }
   }

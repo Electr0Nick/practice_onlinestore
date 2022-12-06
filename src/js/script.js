@@ -36,6 +36,7 @@ const closeCatalogBarHeight = parseInt(catalogHeadStyles.height);
 catalogBody.style.height = `${openCatalogBarHeight}px`;
 const addActiveForCtlg = () => {
     activeClass(catalogBar);
+    activeClass(сatalogButton);
     if (catalogBar.classList.contains('active')) {
       catalogBar.style.height = `${openCatalogBarHeight}px`;
     } else {

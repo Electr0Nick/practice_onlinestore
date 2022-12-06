@@ -11,11 +11,8 @@
     gap: 30px;
     overflow: hidden;
   }
-  
   &__leftside {
     flex: 0 0 260px;
-
-    min-height: 100vh;// temp
   }
   &__catalogbar{
     width: 100%;
@@ -23,10 +20,18 @@
   }
   &__news {
     width: 100%;
+    margin-bottom: 40px;
+  }
+  &__reviews {
+    width: 100%;
   }
   &__rightside {
     flex: 1 1 auto;
-
+    
     min-height: 100vh;// temp
+  }
+  &__search {
+    width: 100%;
+    margin-bottom: 22px;
   }
 }

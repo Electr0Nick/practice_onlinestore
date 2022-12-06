@@ -37,11 +37,23 @@
     height: 36px;
     background-color: $main_color_dark;
     cursor: pointer;
+    &.active {
+      & .ctlg-head__btnline:first-child{
+        transform: translateY(7px) rotate(45deg);
+      }
+      & .ctlg-head__btnline:nth-child(2){
+        width: 0;
+      }
+      & .ctlg-head__btnline:last-child{
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
   }
   &__btnline {
     width: 24px;
     height: 2px;
     background-color: $main-text_color;
+    transition: 200ms;
   }
 }
 .ctlg-body {
