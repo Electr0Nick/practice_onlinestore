@@ -1,13 +1,16 @@
 "use strict"
 
 // для сборки GULP: ------------------------------------- --------------------------------------
-import isWebp from './modules/is_webp_for_css.js';
+import isWebp from './modules/can-browser-support-webp.js';
 isWebp();
 // для динамического адаптива ------------------------------------- ----------------------------
-import { useDynamicAdapt } from './modules/dynamicAdapt.js'
+import { useDynamicAdapt } from './modules/dynamic-adapt.js'
 useDynamicAdapt();
+// слайдеры ------------------------------------- ----------------------------
+import { topSwiper } from './swiper_settings.js'
+topSwiper();
 
-
+// присвоение/изъятие у элемента класса .active ------------------------------------- ----------------------------
 const activeClass = (el) => {
   el.classList.toggle('active');
 }
