@@ -4,6 +4,18 @@
   }
 }
 
+.ibg {
+  position: relative;
+}
+.ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
 .basket {
   &__circle {
     display: flex;
@@ -36,6 +48,7 @@
     }
   }
 }
+
 .product-card {
   position: relative;
   display: flex;
