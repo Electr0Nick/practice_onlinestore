@@ -1,29 +1,60 @@
 .main {
   margin-top: 165px;
-  @media($media-mxw3){
+  @media($media-mxw4){
     margin-top: 105px;
   }
-  @media($media-mxw4){
-    margin-top: 65px;
+  @media($media-mxw5){
+    margin-top: 68px;
   }
   &__container {
     display: flex;
     gap: 30px;
     overflow: hidden;
+    @media ($media-mxw2) {
+      display: block;
+    }
   }
   &__leftside {
     flex: 0 0 260px;
   }
   &__catalogbar{
+    position: relative;
     width: 100%;
     margin-bottom: 40px;
+    @media ($media-mxw2) {
+      margin-bottom: 20px;
+      &::after {
+        display: block;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+        z-index: 36;
+        width: 100%;
+        height: 20px;
+        background-color: $bg_color;
+      }
+    }
+    @media ($media-mxw5) {
+      margin-bottom: 8px;
+      &::after {
+        bottom: -8px;
+        height: 8px;
+      }
+    }
   }
   &__news {
     width: 100%;
     margin-bottom: 40px;
+    @media ($media-mxw2) {
+      display: none;
+    }
   }
   &__reviews {
     width: 100%;
+    @media ($media-mxw2) {
+      display: none;
+    }
   }
   &__rightside {
     flex: 1 1 auto;

@@ -3,6 +3,9 @@
   height: 408px;
   padding-bottom: 28px;
   overflow: hidden;
+  @media($media-mxw5) {
+    height: 300px;
+  }
   &__wrapper {
     display: flex;
     width: 100%;
@@ -30,6 +33,9 @@
     width: 100%;
     transform: translateY(-28px);
     counter-reset: item-number;
+    @media($media-mxw5) {
+      display: none;
+    }
   }
   &__bullet {
     width: 56px;
@@ -73,12 +79,20 @@
     font-size: 48px;
     line-height: 43px;
     text-transform: uppercase;
+    @media($media-mxw5) {
+      font-size: 36px;
+      line-height: 32px;
+    }
   }
   &__description {
     position: absolute;
     font-size: 14px;
     line-height: 24px;
     text-transform: uppercase;
+    @media($media-mxw5) {
+      font-size: 12px;
+      line-height: 19px;
+    }
   }
   &__style {
     &_1 {
@@ -87,9 +101,12 @@
       color: $third_color;
     }
     &_3 {
-      padding: 5px 10px;
+      padding: 4px 10px;
       color: $main-text_color;
       background-color: $second_color_dark;
+      @media($media-mxw5) {
+        padding: 2px 7px;
+      }
     }
     &_4 {
       color: $second_color_dark;
@@ -103,6 +120,10 @@
     color: $main-text_color;
     font-size: 36px;
     line-height: 30px;
+    @media($media-mxw5) {
+      font-size: 26px;
+      line-height: 24px;
+    }
   }
   &__button {
     position: absolute;
@@ -134,22 +155,20 @@
       background-image: linear-gradient(to right, rgba(27, 58, 70, 0.9), transparent);
     }
     & .slide-info__title {
-      top: 30px;
-      left: 40px;
-      & span {
-      }
+      top: 7%;
+      left: 5%;
     }
     & .slide-info__description {
-      top: 190px;
-      left: 40px;
+      top: 50%;
+      left: 5%;
     }
     & .slide-info__price {
-      top: 290px;
-      left: 80px;
+      top: 77%;
+      left: 10%;
     }
     & .slide-info__button {
-      top: 30px;
-      right: 40px;
+      top: 7%;
+      right: 5%;
       border: 3px solid $second_color_black;
       color: $second_color_black;
     }
@@ -163,23 +182,21 @@
       background-image: linear-gradient(to top, rgba(27, 58, 70, 0.9), transparent);
     }
     & .slide-info__title {
-      bottom: 50px;
-      right: 40px;
+      bottom: 13%;
+      right: 5%;
       text-align: right;
-      & span {
-      }
     }
     & .slide-info__description {
-      top: 30px;
-      left: 40px;
+      top: 7%;
+      left: 5%;
     }
     & .slide-info__price {
-      top: 130px;
-      left: 40px;
+      top: 37%;
+      left: 5%;
     }
     & .slide-info__button {
-      top: 190px;
-      left: 40px;
+      top: 53%;
+      left: 5%;
       border: 3px solid $main-text_color;
       color: $main-text_color;
     }
@@ -190,22 +207,68 @@
       bottom: 0;
       width: 100%;
       height: 50%;
-      // background-image: linear-gradient(to top, rgba(27, 58, 70, 0.9), transparent);
+      background-image: linear-gradient(to top, rgba(27, 58, 70, 0.9), transparent);
     }
     & .slide-info__title {
-      bottom: 50px;
-      right: 40px;
-      text-align: right;
-      & span {
-      }
+      bottom: 18%;
+      left: 5%;
     }
     & .slide-info__description {
-      top: 30px;
-      left: 40px;
+      top: 7%;
+      right: 5%;
+      text-align: right;
     }
     & .slide-info__button {
-      top: 190px;
-      left: 40px;
+      top: 37%;
+      right: 5%;
+      border: 3px solid $main-text_color;
+      color: $main-text_color;
+    }
+  }
+  &_4 {
+    & .slide-info__gradient {
+      top: 0;
+      left: 0;
+      width: 60%;
+      height: 100%;
+      background-image: linear-gradient(to right, rgba(28, 114, 136, 0.9), transparent);
+    }
+    & .slide-info__title {
+      bottom: 15%;
+      left: 5%;
+      line-height: 54px;
+    }
+    & .slide-info__description {
+      top: 7%;
+      right: 5%;
+      text-align: right;
+    }
+    & .slide-info__price {
+      top: 21%;
+      right: 5%;
+      color: $third_color;
+    }
+    & .slide-info__button {
+      bottom: 15%;
+      right: 5%;
+      border: 3px solid $second_color_black;
+      color: $second_color_black;
+    }
+  }
+  &_5 {
+    & .slide-info__title {
+      bottom: 21%;
+      left: 5%;
+      font-size: 120px;
+    }
+    & .slide-info__description {
+      bottom: 39%;
+      left: 5%;
+      text-align: right;
+    }
+    & .slide-info__button {
+      bottom: 47%;
+      left: 5%;
       border: 3px solid $main-text_color;
       color: $main-text_color;
     }

@@ -20,12 +20,30 @@
   height: 100px;
   padding: 15px 20px;
   background-color: $main_color;
+  @media ($media-mxw2) {
+    height: 70px;
+  }
+  @media ($media-mxw3) {
+    height: 60px;
+    padding-left: 15px;
+    padding-right: 10px;
+  }
+  @media ($media-mxw3) {
+    height: 50px;
+  }
   &__title {
     flex: 0 1 65%;
     font-family: UniSansHeavyCaps, sans-serif;
     font-size: 30px;
     font-weight: 400;
     cursor: default;
+    @media ($media-mxw3) {
+      flex: 0 1 80%;
+      font-size: 24px;
+    }
+    @media ($media-mxw5) {
+      font-size: 20px;
+    }
   }
   &__button {
     display: flex;

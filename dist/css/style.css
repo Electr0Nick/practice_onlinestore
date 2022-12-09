@@ -654,6 +654,7 @@ body {
   flex: 0 0 260px
 }
 .main__catalogbar {
+  position: relative;
   width: 100%;
   margin-bottom: 40px
 }
@@ -1040,8 +1041,8 @@ body {
 }
 .search-block__button {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 10%;
-  flex: 0 0 10%;
+  -ms-flex: 0 0 15%;
+  flex: 0 0 15%;
   background-color: #f68038;
   color: #fff;
   font-weight: 900;
@@ -1054,10 +1055,13 @@ body {
   left: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (33%)[3];
-  grid-template-columns: repeat(3,33%);
+  -ms-grid-columns: (30%)[3];
+  grid-template-columns: repeat(3,30%);
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   width: 100%;
-  padding: 22px 30px 0;
+  padding: 25px 40px 0;
   border-bottom: 4px solid #f68038;
   background-color: #fff;
   -webkit-transform: translateY(-102%);
@@ -1073,22 +1077,17 @@ body {
   transform: translateY(0)
 }
 .search-block__item {
-  margin-bottom: 22px
+  margin-bottom: 25px
 }
 .search-block__checkbox {
   display: none
 }
 .search-block__checkbox:checked + .search-block__label {
-  background-color: #f49e68;
-  color: #fff
+  color: #f68038
 }
 .search-block__label {
-  padding: 3px 10px;
   border-radius: 10px;
   color: #999
-}
-.search-block__label:hover {
-  background-color: #f3f3f3
 }
 @font-face {
   font-family: swiper-icons;
@@ -1376,7 +1375,7 @@ body {
   color: #f68038
 }
 .slide-info__style_3 {
-  padding: 5px 10px;
+  padding: 4px 10px;
   color: #fff;
   background-color: #999
 }
@@ -1422,20 +1421,20 @@ body {
   background-image: linear-gradient(to right,rgba(27,58,70,.9),transparent)
 }
 .slide-info_1 .slide-info__title {
-  top: 30px;
-  left: 40px
+  top: 7%;
+  left: 5%
 }
 .slide-info_1 .slide-info__description {
-  top: 190px;
-  left: 40px
+  top: 50%;
+  left: 5%
 }
 .slide-info_1 .slide-info__price {
-  top: 290px;
-  left: 80px
+  top: 77%;
+  left: 10%
 }
 .slide-info_1 .slide-info__button {
-  top: 30px;
-  right: 40px;
+  top: 7%;
+  right: 5%;
   border: 3px solid #000;
   color: #000
 }
@@ -1449,21 +1448,21 @@ body {
   background-image: linear-gradient(to top,rgba(27,58,70,.9),transparent)
 }
 .slide-info_2 .slide-info__title {
-  bottom: 50px;
-  right: 40px;
+  bottom: 13%;
+  right: 5%;
   text-align: right
 }
 .slide-info_2 .slide-info__description {
-  top: 30px;
-  left: 40px
+  top: 7%;
+  left: 5%
 }
 .slide-info_2 .slide-info__price {
-  top: 130px;
-  left: 40px
+  top: 37%;
+  left: 5%
 }
 .slide-info_2 .slide-info__button {
-  top: 190px;
-  left: 40px;
+  top: 53%;
+  left: 5%;
   border: 3px solid #fff;
   color: #fff
 }
@@ -1471,20 +1470,69 @@ body {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 50%
+  height: 50%;
+  background-image: -webkit-gradient(linear,left bottom,left top,from(rgba(27,58,70,.9)),to(transparent));
+  background-image: -o-linear-gradient(bottom,rgba(27,58,70,.9),transparent);
+  background-image: linear-gradient(to top,rgba(27,58,70,.9),transparent)
 }
 .slide-info_3 .slide-info__title {
-  bottom: 50px;
-  right: 40px;
-  text-align: right
+  bottom: 18%;
+  left: 5%
 }
 .slide-info_3 .slide-info__description {
-  top: 30px;
-  left: 40px
+  top: 7%;
+  right: 5%;
+  text-align: right
 }
 .slide-info_3 .slide-info__button {
-  top: 190px;
-  left: 40px;
+  top: 37%;
+  right: 5%;
+  border: 3px solid #fff;
+  color: #fff
+}
+.slide-info_4 .slide-info__gradient {
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background-image: -webkit-gradient(linear,left top,right top,from(rgba(28,114,136,.9)),to(transparent));
+  background-image: -o-linear-gradient(left,rgba(28,114,136,.9),transparent);
+  background-image: linear-gradient(to right,rgba(28,114,136,.9),transparent)
+}
+.slide-info_4 .slide-info__title {
+  bottom: 15%;
+  left: 5%;
+  line-height: 54px
+}
+.slide-info_4 .slide-info__description {
+  top: 7%;
+  right: 5%;
+  text-align: right
+}
+.slide-info_4 .slide-info__price {
+  top: 21%;
+  right: 5%;
+  color: #f68038
+}
+.slide-info_4 .slide-info__button {
+  bottom: 15%;
+  right: 5%;
+  border: 3px solid #000;
+  color: #000
+}
+.slide-info_5 .slide-info__title {
+  bottom: 21%;
+  left: 5%;
+  font-size: 120px
+}
+.slide-info_5 .slide-info__description {
+  bottom: 39%;
+  left: 5%;
+  text-align: right
+}
+.slide-info_5 .slide-info__button {
+  bottom: 47%;
+  left: 5%;
   border: 3px solid #fff;
   color: #fff
 }
@@ -1545,6 +1593,9 @@ body {
   .card-review:hover .card-review__text {
     color: #fff
   }
+  .search-block__label:hover {
+    color: #f3f3f3
+  }
   .slide-info__button:hover {
     background-color: #f68038
   }
@@ -1603,6 +1654,34 @@ body {
     font-size: 9px
   }
 }
+@media (max-width:992px) {
+  .main__container {
+    display: block
+  }
+  .main__catalogbar {
+    margin-bottom: 20px
+  }
+  .main__catalogbar::after {
+    display: block;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -20px;
+    z-index: 36;
+    width: 100%;
+    height: 20px;
+    background-color: #fff
+  }
+  .main__news {
+    display: none
+  }
+  .main__reviews {
+    display: none
+  }
+  .ctlg-head {
+    height: 70px
+  }
+}
 @media (max-width:900px) {
   .menu {
     padding: 12px 0 16px
@@ -1648,6 +1727,20 @@ body {
   }
   .timetable__icon {
     font-size: 20px
+  }
+  .ctlg-head {
+    height: 60px;
+    padding-left: 15px;
+    padding-right: 10px
+  }
+  .ctlg-head {
+    height: 50px
+  }
+  .ctlg-head__title {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 80%;
+    flex: 0 1 80%;
+    font-size: 24px
   }
 }
 @media (max-width:768px) {
@@ -1778,7 +1871,7 @@ body {
 }
 @media (max-width:620px) {
   .header__down-block {
-    height: 0
+    display: none
   }
   .menu {
     padding: 0
@@ -1794,6 +1887,54 @@ body {
     display: none
   }
   .main {
-    margin-top: 65px
+    margin-top: 68px
+  }
+  .main__catalogbar {
+    margin-bottom: 8px
+  }
+  .main__catalogbar::after {
+    bottom: -8px;
+    height: 8px
+  }
+  .ctlg-head__title {
+    font-size: 20px
+  }
+  .search-block__options {
+    display: none
+  }
+  .search-block__categories {
+    display: none
+  }
+  .search-block__search {
+    border-left: 2px solid #f3f3f3
+  }
+  .search-block__button {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%
+  }
+  .search-block__list {
+    display: none
+  }
+  .top-slider {
+    height: 300px
+  }
+  .top-slider__pagination {
+    display: none
+  }
+  .slide-info__title {
+    font-size: 36px;
+    line-height: 32px
+  }
+  .slide-info__description {
+    font-size: 12px;
+    line-height: 19px
+  }
+  .slide-info__style_3 {
+    padding: 2px 7px
+  }
+  .slide-info__price {
+    font-size: 26px;
+    line-height: 24px
   }
 }

@@ -17,6 +17,9 @@
     background-color: $second_color_light;
     color: $second_color_dark;
     cursor: pointer;
+    @media ($media-mxw5) {
+      display: none;
+    }
   }
   &__magnifier {
     &::before {
@@ -30,6 +33,9 @@
     border-bottom: 1px dashed;
     font-size: 14px;
     font-weight: 400;
+    @media ($media-mxw5) {
+      display: none;
+    }
   }
   &__arrows {
     &::before {
@@ -50,13 +56,19 @@
     padding: 0 12px;
     color: $second_color_dark;
     font-size: 14px;
+    @media ($media-mxw5) {
+      border-left: 2px solid $second_color_light;
+    }
   }
   &__button {
-    flex: 0 0 10%;
+    flex: 0 0 15%;
     background-color: $third_color;
     color: $main-text_color;
     font-weight: 900;
     text-transform: uppercase;
+    @media ($media-mxw5) {
+      flex: 0 0 25%;
+    }
   }
   &__list {
     position: absolute;
@@ -64,35 +76,39 @@
     top: 40px;
     left: 0;
     display: grid;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(3, 30%);
+    justify-content: space-between;
     width: 100%;
-    padding: 22px 30px 0;
+    padding: 25px 40px 0;
     border-bottom: 4px solid $third_color;
     background-color: $bg_color;
     transform: translateY(-102%);
     transition: 300ms;
+    @media ($media-mxw5) {
+      display: none;
+    }
     &.active {
       transform: translateY(0);
     }
   }
   &__item {
-    margin-bottom: 22px;
+    margin-bottom: 25px;
   }
   &__checkbox {
     display: none;
     &:checked {
       & + .search-block__label {
-        background-color: $third_color_lite;
-        color: $main-text_color;
+        color: $third_color;
       }
     }
   }
   &__label {
-    padding: 3px 10px;
     border-radius: 10px;
     color: $second_color_dark;
-    &:hover {
-      background-color: $second_color_light;
+    @media ($media-mnw1) {
+      &:hover {
+        color: $second_color_light;
+      }
     }
   }
 }

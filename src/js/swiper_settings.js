@@ -7,11 +7,6 @@ export function topSwiper() {
     slideClass: 'top-slider__slide',
     loop: true,
     speed: 1000,
-
-    //-----------------------------
-    initialSlide: 2,
-    //-----------------------------
-    
     pagination: {
       el: `.top-slider__pagination`,
       type: `bullets`,
