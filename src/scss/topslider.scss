@@ -6,6 +6,9 @@
   @media($media-mxw5) {
     height: 300px;
   }
+  @media($media-mxw6) {
+    height: 220px;
+  }
   &__wrapper {
     display: flex;
     width: 100%;
@@ -83,6 +86,10 @@
       font-size: 36px;
       line-height: 32px;
     }
+    @media($media-mxw6) {
+      font-size: 22px;
+      line-height: 20px;
+    }
   }
   &__description {
     position: absolute;
@@ -92,6 +99,10 @@
     @media($media-mxw5) {
       font-size: 12px;
       line-height: 19px;
+    }
+    @media($media-mxw6) {
+      font-size: 9px;
+      line-height: 12px;
     }
   }
   &__style {
@@ -124,26 +135,43 @@
       font-size: 26px;
       line-height: 24px;
     }
+    @media($media-mxw6) {
+      font-size: 16px;
+      line-height: 14px;
+    }
   }
   &__button {
     position: absolute;
     padding: 10px 35px 10px 18px;
+    border: 3px solid $main-text_color;
     border-radius: 20px;
     font-size: 14px;
     line-height: 9px;
     text-transform: uppercase;
+    color: $main-text_color;
     transition: 200ms;
+    @media($media-mxw6) {
+      border-width: 2px;
+    }
     &::before {
       position: absolute;
       top: 50%;
       right: 11px;
-      transform: translateY(-55%);
+      transform: translateY(-50%);
       font-size: 16px;
     }
     @media ($media-mnw1) {
       &:hover {
         background-color: $third_color;
       }
+    }
+    @media($media-mxw6) {
+      & span {
+        display: none;
+      }
+      height: 30px;
+      width: 40px;
+      padding: 0;
     }
   }
   &_1 {
@@ -169,7 +197,7 @@
     & .slide-info__button {
       top: 7%;
       right: 5%;
-      border: 3px solid $second_color_black;
+      border-color: $second_color_black;
       color: $second_color_black;
     }
   }
@@ -197,8 +225,6 @@
     & .slide-info__button {
       top: 53%;
       left: 5%;
-      border: 3px solid $main-text_color;
-      color: $main-text_color;
     }
   }
   &_3 {
@@ -221,8 +247,6 @@
     & .slide-info__button {
       top: 37%;
       right: 5%;
-      border: 3px solid $main-text_color;
-      color: $main-text_color;
     }
   }
   &_4 {
@@ -237,6 +261,12 @@
       bottom: 15%;
       left: 5%;
       line-height: 54px;
+      @media($media-mxw5) {
+        line-height: 40px;
+      }
+      @media($media-mxw6) {
+        line-height: 26px;
+      }
     }
     & .slide-info__description {
       top: 7%;
@@ -251,7 +281,7 @@
     & .slide-info__button {
       bottom: 15%;
       right: 5%;
-      border: 3px solid $second_color_black;
+      border-color: $second_color_black;
       color: $second_color_black;
     }
   }
@@ -260,6 +290,12 @@
       bottom: 21%;
       left: 5%;
       font-size: 120px;
+      @media($media-mxw5) {
+        font-size: 90px;
+      }
+      @media($media-mxw6) {
+        font-size: 60px;
+      }
     }
     & .slide-info__description {
       bottom: 39%;
@@ -269,8 +305,6 @@
     & .slide-info__button {
       bottom: 47%;
       left: 5%;
-      border: 3px solid $main-text_color;
-      color: $main-text_color;
     }
   }
 

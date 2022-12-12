@@ -27,23 +27,18 @@ menuButton.addEventListener('click', addActiveForNav);
 
 
 // плавное открытие каталог-бара ------------------------------------- -------------------------
-const catalogBar = document.getElementById('ctlg');
-const catalogHead = document.getElementById('ctlg-head');
-const catalogHeadStyles = getComputedStyle(catalogHead);
 const сatalogButton = document.getElementById('ctlg-btn');
 const catalogBody = document.getElementById('ctlg-body');
 const arrCatalogBarLinks = document.querySelectorAll('.ctlg-body__link');
 const catalogBarLinkStyles = getComputedStyle(arrCatalogBarLinks[0]);
-const openCatalogBarHeight = parseInt(catalogHeadStyles.height) + arrCatalogBarLinks.length * parseInt(catalogBarLinkStyles.height);
-const closeCatalogBarHeight = parseInt(catalogHeadStyles.height);
-catalogBody.style.height = `${openCatalogBarHeight}px`;
+const openCatalogBarBodyHeight = arrCatalogBarLinks.length * parseInt(catalogBarLinkStyles.height);
 const addActiveForCtlg = () => {
-    activeClass(catalogBar);
+    activeClass(catalogBody);
     activeClass(сatalogButton);
-    if (catalogBar.classList.contains('active')) {
-      catalogBar.style.height = `${openCatalogBarHeight}px`;
+    if (catalogBody.classList.contains('active')) {
+      catalogBody.style.height = `${openCatalogBarBodyHeight}px`;
     } else {
-      catalogBar.style.height = `${closeCatalogBarHeight}px`;
+      catalogBody.style.height = `0px`;
     }
   }
 сatalogButton.addEventListener('click', addActiveForCtlg);
@@ -74,7 +69,7 @@ const addActiveForSearchList = () => {
 searchOptions.addEventListener('click', addActiveForSearchList);
 
 
-// плавное открытие списка категорий поиска ------------------------------------- --------------------------------------- --
+// изменение текста в элементе srch-categories в зависимости от кол-ва выбранных категорий------------------------------------- --------------------------------------- --
 const searchCategories = document.getElementById('srch-categories');
 const arrSearchCheckboxes = document.querySelectorAll('.search-block__checkbox');
 const addAmountOfCategories = () => {

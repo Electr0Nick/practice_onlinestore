@@ -9,6 +9,7 @@
     transition: 100ms;
   }
   &__card {
+    width: 100%;
     margin-bottom: 20px;
   }
   @media ($media-mnw1) {

@@ -9,6 +9,7 @@
     transition: 100ms;
   }
   &__card {
+    width: 100%;
     margin-bottom: 30px;
   }
   @media ($media-mnw1) {
@@ -31,6 +32,9 @@
     display: flex;
     justify-content: space-between;
     gap: 16px;
+    @media ($media-mxw3){
+      justify-content: space-around;
+    }
   }
   &__date {
     display: flex;
@@ -50,6 +54,7 @@
     line-height: 12px;
   }
   &__description {
+    flex: 0 0 83%;
     line-height: 18px;
     color: $second_color_dark;
   }

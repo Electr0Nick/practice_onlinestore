@@ -14,10 +14,10 @@ export function topSwiper() {
       bulletActiveClass: 'top-slider__bullet_active',
       clickable: true,
     },
-    // autoplay: {
-    //   delay: 5000,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
   })
 
   // установка фоновых изображений на буллеты ------------------------------------- --------------------------------------- --
