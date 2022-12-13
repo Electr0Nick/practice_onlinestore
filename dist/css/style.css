@@ -758,11 +758,12 @@ body {
 }
 .ctlg-body {
   width: 100%;
-  height: 0;
+  max-height: 0;
   background-color: #009baf;
   -webkit-transition: .2s;
   -o-transition: .2s;
-  transition: .2s
+  transition: .2s;
+  overflow: hidden
 }
 .ctlg-body__list {
   display: -webkit-box;
@@ -786,9 +787,6 @@ body {
   font-weight: 300;
   line-height: 40px;
   cursor: pointer
-}
-.ctlg-body__link_menu {
-  position: relative
 }
 .ctlg-body__link_menu::before {
   position: absolute;
@@ -838,15 +836,6 @@ body {
 }
 .ctlg-panel__products {
   padding: 2px
-}
-.ctlg-panel.active {
-  pointer-events: auto;
-  z-index: 38
-}
-.ctlg-panel.active .ctlg-panel__item {
-  -webkit-transform: translate(0,0);
-  -ms-transform: translate(0,0);
-  transform: translate(0,0)
 }
 .news-block__title {
   margin-bottom: 26px;
@@ -979,7 +968,6 @@ body {
   transition: .1s
 }
 .search-block {
-  position: relative;
   width: 100%;
   height: 40px
 }
@@ -1064,7 +1052,7 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  height: 0;
+  max-height: 0;
   padding: 25px 40px 0;
   border-bottom: 4px solid #f68038;
   background-color: #fff;
@@ -1273,6 +1261,7 @@ body {
 }
 .top-slider {
   position: relative;
+  z-index: 25;
   height: 408px;
   padding-bottom: 28px;
   overflow: hidden
@@ -1561,6 +1550,15 @@ body {
     background-color: #71c7d3;
     color: #fff
   }
+  .ctlg-panel.active {
+    pointer-events: auto;
+    z-index: 38
+  }
+  .ctlg-panel.active .ctlg-panel__item {
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    transform: translate(0,0)
+  }
   .news-block:hover .news-block__title {
     color: #1ab9ce
   }
@@ -1669,12 +1667,30 @@ body {
   .ctlg-panel__item {
     position: relative;
     height: auto;
+    border: none;
+    background-color: #71c7d3;
     -webkit-transform: translate(0,0);
     -ms-transform: translate(0,0);
     transform: translate(0,0)
   }
+  .ctlg-panel__tipes {
+    padding: 0
+  }
+  .ctlg-panel__link {
+    height: 40px;
+    padding-left: 40px;
+    border-bottom: 1px solid #1ab9ce;
+    line-height: 36px;
+    color: #fff
+  }
   .ctlg-panel__products {
     display: none
+  }
+  .ctlg-panel {
+    height: 0
+  }
+  .ctlg-panel.active {
+    height: 100%
   }
 }
 @media (max-width:900px) {

@@ -11,9 +11,7 @@ import { topSwiper } from './swiper_settings.js'
 topSwiper();
 
 // присвоение/изъятие у элемента класса .active ------------------------------------- ----------------------------
-const activeClass = (el) => {
-  el.classList.toggle('active');
-}
+const activeClass = (el) => el.classList.toggle('active');
 
 
 // бургер меню ------------------------------------- --------------------------------------- --
@@ -29,16 +27,21 @@ menuButton.addEventListener('click', addActiveForNav);
 // плавное открытие каталог-бара ------------------------------------- -------------------------
 const сatalogButton = document.getElementById('ctlg-btn');
 const catalogBody = document.getElementById('ctlg-body');
-const arrCatalogBarLinks = document.querySelectorAll('.ctlg-body__link');
-const catalogBarLinkStyles = getComputedStyle(arrCatalogBarLinks[0]);
-const openCatalogBarBodyHeight = arrCatalogBarLinks.length * parseInt(catalogBarLinkStyles.height);
+// const arrCatalogBarLinks = document.querySelectorAll('.ctlg-body__link');
+// const catalogBarLinkStyles = getComputedStyle(arrCatalogBarLinks[0]);
+// const openCatalogBarBodyHeight = arrCatalogBarLinks.length * parseInt(catalogBarLinkStyles.height);
 const addActiveForCtlg = () => {
     activeClass(catalogBody);
     activeClass(сatalogButton);
+    // if (catalogBody.classList.contains('active')) {
+    //   catalogBody.style.height = `${openCatalogBarBodyHeight}px`;
+    // } else {
+    //   catalogBody.style.height = `0px`;
+    // }
     if (catalogBody.classList.contains('active')) {
-      catalogBody.style.height = `${openCatalogBarBodyHeight}px`;
+      catalogBody.style.maxHeight = `${catalogBody.scrollHeight}px`;
     } else {
-      catalogBody.style.height = `0px`;
+      catalogBody.style.maxHeight = '0';
     }
   }
 сatalogButton.addEventListener('click', addActiveForCtlg);
@@ -49,12 +52,17 @@ const arrCatalogBarMenuItems = document.querySelectorAll('.ctlg-body__menu');
 for (let i = 0; i < arrCatalogBarMenuItems.length; i++) {
   const menuItem = arrCatalogBarMenuItems[i];
   const itemPanel = menuItem.querySelector('.ctlg-panel');
+  if (document.documentElement.clientWidth > 992) {
   menuItem.addEventListener('mouseenter', function(){
     itemPanel.classList.add('active');
   });
   menuItem.addEventListener('mouseleave', function(){
     itemPanel.classList.remove('active');
   });
+  } else {
+    const addActiveForMenuItem = () => activeClass(itemPanel);
+    menuItem.addEventListener('click', addActiveForMenuItem);
+  }
 }
 
 
@@ -65,6 +73,11 @@ const searchList = document.getElementById('srch-list');
 const addActiveForSearchList = () => {
   activeClass(searchList);
   activeClass(searchArrows);
+  if (searchList.classList.contains('active')) {
+    searchList.style.maxHeight = `${searchList.scrollHeight}px`;
+  } else {
+    searchList.style.maxHeight = '0';
+  }
 }
 searchOptions.addEventListener('click', addActiveForSearchList);
 

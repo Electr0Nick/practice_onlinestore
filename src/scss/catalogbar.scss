@@ -74,9 +74,10 @@
 }
 .ctlg-body {
   width: 100%;
-  height: 0;
+  max-height: 0;
   background-color: $main_color;
   transition: 200ms;
+  overflow: hidden;
   &__list {
     display: flex;
     flex-direction: column;
@@ -95,7 +96,6 @@
     line-height: 40px;
     cursor: pointer;
     &_menu {
-      position: relative;
       &::before {
         position: absolute;
         right: 10px;
@@ -139,12 +139,17 @@
     @media ($media-mxw2) {
       position: relative;
       height: auto;
+      border: none;
+      background-color: $main_color_pale;
       transform: translate(0, 0);
     }
   }
   &__tipes {
     padding: 12px 0 12px;
     color: $main_color_light;
+    @media ($media-mxw2) {
+      padding: 0;
+    }
   }
   &__list {
   }
@@ -159,6 +164,13 @@
         color: $main-text_color;
       }
     }
+    @media ($media-mxw2) {
+      height: 40px;
+      padding-left: 40px;
+      border-bottom: 1px solid $main_color_light;
+      line-height: 36px;
+      color: $main-text_color;
+    }
   }
   &__products {
     padding: 2px;
@@ -168,11 +180,19 @@
   }
   &__product-card {
   }
-  &.active {
-    pointer-events: auto;
-    z-index: 38;
-    & .ctlg-panel__item {
-      transform: translate(0, 0);
+  @media ($media-mnw1) {
+    &.active {
+      pointer-events: auto;
+      z-index: 38;
+      & .ctlg-panel__item {
+        transform: translate(0, 0);
+      }
+    }
+  }
+  @media ($media-mxw2) {
+    height: 0;
+    &.active {
+      height: 100%;
     }
   }
 }
