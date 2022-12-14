@@ -84,7 +84,7 @@
     justify-content: flex-end;
     height: 100%;
   }
-  &__menu { 
+  &__menu {
   }
   &__link {
     width: 100%;
@@ -119,6 +119,9 @@
       position: relative;
       left: auto;
     }
+  }
+  &.active {
+    max-height: 1000px;
   }
 }
 .ctlg-panel {
@@ -190,9 +193,10 @@
     }
   }
   @media ($media-mxw2) {
-    height: 0;
+    max-height: 0;
+    transition: 200ms;
     &.active {
-      height: 100%;
+      pointer-events: auto;
     }
   }
 }

@@ -803,6 +803,9 @@ body {
   z-index: 37;
   left: 100%
 }
+.ctlg-body.active {
+  max-height: 1000px
+}
 .ctlg-panel {
   width: 100%;
   height: 100%;
@@ -1687,10 +1690,13 @@ body {
     display: none
   }
   .ctlg-panel {
-    height: 0
+    max-height: 0;
+    -webkit-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s
   }
   .ctlg-panel.active {
-    height: 100%
+    pointer-events: auto
   }
 }
 @media (max-width:900px) {

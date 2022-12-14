@@ -27,41 +27,48 @@ menuButton.addEventListener('click', addActiveForNav);
 // плавное открытие каталог-бара ------------------------------------- -------------------------
 const сatalogButton = document.getElementById('ctlg-btn');
 const catalogBody = document.getElementById('ctlg-body');
-// const arrCatalogBarLinks = document.querySelectorAll('.ctlg-body__link');
-// const catalogBarLinkStyles = getComputedStyle(arrCatalogBarLinks[0]);
-// const openCatalogBarBodyHeight = arrCatalogBarLinks.length * parseInt(catalogBarLinkStyles.height);
 const addActiveForCtlg = () => {
-    activeClass(catalogBody);
-    activeClass(сatalogButton);
-    // if (catalogBody.classList.contains('active')) {
-    //   catalogBody.style.height = `${openCatalogBarBodyHeight}px`;
-    // } else {
-    //   catalogBody.style.height = `0px`;
-    // }
-    if (catalogBody.classList.contains('active')) {
-      catalogBody.style.maxHeight = `${catalogBody.scrollHeight}px`;
-    } else {
-      catalogBody.style.maxHeight = '0';
-    }
-  }
+  activeClass(catalogBody);
+  activeClass(сatalogButton);
+
+  // if (catalogBody.classList.contains('active')) {
+  //     catalogBody.style.maxHeight = `${catalogBody.scrollHeight}px`;
+  //   } else {
+  //     catalogBody.style.maxHeight = '0';
+  //   }
+
+  // if (!catalogBody.classList.contains('active')) {
+  //   const arrPanels = document.querySelectorAll('.ctlg-panel');
+  //   for (let i = 0; i < arrPanels.length; i++) {
+  //     arrPanels[i].classList.remove('active');
+  //     arrPanels[i].style.maxHeight = '0';
+  //   }
+  // }
+
+}
 сatalogButton.addEventListener('click', addActiveForCtlg);
-
-
-// плавное открытие правой панели каталог-бара ------------------------------------- ------------------------
+  
+  
+// плавное открытие панели каталог-бара ------------------------------------- ------------------------
 const arrCatalogBarMenuItems = document.querySelectorAll('.ctlg-body__menu');
 for (let i = 0; i < arrCatalogBarMenuItems.length; i++) {
   const menuItem = arrCatalogBarMenuItems[i];
+  const itemLink = menuItem.querySelector('.ctlg-body__link_menu');
   const itemPanel = menuItem.querySelector('.ctlg-panel');
   if (document.documentElement.clientWidth > 992) {
-  menuItem.addEventListener('mouseenter', function(){
-    itemPanel.classList.add('active');
-  });
-  menuItem.addEventListener('mouseleave', function(){
-    itemPanel.classList.remove('active');
-  });
+    itemLink.addEventListener('mouseenter', () => itemPanel.classList.add('active'));
+    itemLink.addEventListener('mouseleave', () => itemPanel.classList.remove('active'));
   } else {
-    const addActiveForMenuItem = () => activeClass(itemPanel);
-    menuItem.addEventListener('click', addActiveForMenuItem);
+    itemLink.addEventListener('click', function(event){
+      event.preventDefault();
+      activeClass(itemPanel);
+      if (itemPanel.classList.contains('active')) {
+        itemPanel.style.maxHeight = `${itemPanel.scrollHeight}px`;
+      } else {
+        itemPanel.style.maxHeight = '0';
+      }
+    });
+    itemPanel.addEventListener('transitionend', () => catalogBody.style.maxHeight = `${catalogBody.scrollHeight}px`)
   }
 }
 
