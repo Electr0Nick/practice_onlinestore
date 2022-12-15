@@ -27,64 +27,48 @@ menuButton.addEventListener('click', addActiveForNav);
 // плавное открытие каталог-бара ------------------------------------- -------------------------
 const сatalogButton = document.getElementById('ctlg-btn');
 const catalogBody = document.getElementById('ctlg-body');
+const arrCatalogMenuItems = document.querySelectorAll('.ctlg-body__menu');
 const addActiveForCtlg = () => {
   activeClass(catalogBody);
   activeClass(сatalogButton);
-
-  // if (catalogBody.classList.contains('active')) {
-  //     catalogBody.style.maxHeight = `${catalogBody.scrollHeight}px`;
-  //   } else {
-  //     catalogBody.style.maxHeight = '0';
-  //   }
-
-  // if (!catalogBody.classList.contains('active')) {
-  //   const arrPanels = document.querySelectorAll('.ctlg-panel');
-  //   for (let i = 0; i < arrPanels.length; i++) {
-  //     arrPanels[i].classList.remove('active');
-  //     arrPanels[i].style.maxHeight = '0';
-  //   }
-  // }
-
+  if (!catalogBody.classList.contains('active')){
+    for (let i = 0; i < arrCatalogMenuItems.length; i++) {
+      const menuItem = arrCatalogMenuItems[i];
+      const itemLink = menuItem.querySelector('.ctlg-body__link_menu');
+      const itemPanel = menuItem.querySelector('.ctlg-panel');
+      itemLink.classList.remove('active');
+      itemPanel.classList.remove('active');
+    }
+  }
 }
 сatalogButton.addEventListener('click', addActiveForCtlg);
   
   
 // плавное открытие панели каталог-бара ------------------------------------- ------------------------
-const arrCatalogBarMenuItems = document.querySelectorAll('.ctlg-body__menu');
-for (let i = 0; i < arrCatalogBarMenuItems.length; i++) {
-  const menuItem = arrCatalogBarMenuItems[i];
+for (let i = 0; i < arrCatalogMenuItems.length; i++) {
+  const menuItem = arrCatalogMenuItems[i];
   const itemLink = menuItem.querySelector('.ctlg-body__link_menu');
   const itemPanel = menuItem.querySelector('.ctlg-panel');
   if (document.documentElement.clientWidth > 992) {
-    itemLink.addEventListener('mouseenter', () => itemPanel.classList.add('active'));
-    itemLink.addEventListener('mouseleave', () => itemPanel.classList.remove('active'));
+    menuItem.addEventListener('mouseenter', () => itemPanel.classList.add('active'));
+    menuItem.addEventListener('mouseleave', () => itemPanel.classList.remove('active'));
   } else {
-    itemLink.addEventListener('click', function(event){
+    menuItem.addEventListener('click', function(event){
       event.preventDefault();
       activeClass(itemPanel);
-      if (itemPanel.classList.contains('active')) {
-        itemPanel.style.maxHeight = `${itemPanel.scrollHeight}px`;
-      } else {
-        itemPanel.style.maxHeight = '0';
-      }
+      activeClass(itemLink);
     });
-    itemPanel.addEventListener('transitionend', () => catalogBody.style.maxHeight = `${catalogBody.scrollHeight}px`)
   }
 }
 
 
-// плавное открытие списка категорий поиска ------------------------------------- --------------------------------------- --
+// плавное открытие панели поиска ------------------------------------- --------------------------------------- --
 const searchOptions = document.getElementById('srch-options');
 const searchArrows = document.getElementById('srch-arrows');
-const searchList = document.getElementById('srch-list');
+const searchPanel = document.getElementById('srch-panel');
 const addActiveForSearchList = () => {
-  activeClass(searchList);
+  activeClass(searchPanel);
   activeClass(searchArrows);
-  if (searchList.classList.contains('active')) {
-    searchList.style.maxHeight = `${searchList.scrollHeight}px`;
-  } else {
-    searchList.style.maxHeight = '0';
-  }
 }
 searchOptions.addEventListener('click', addActiveForSearchList);
 
