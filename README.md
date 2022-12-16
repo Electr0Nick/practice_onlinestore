@@ -1,6 +1,6 @@
 # practice_onlinestore
 
-![скрин](https://github.com/Electr0Nick/practice_onlinestore/blob/main/src/files/screenshot.png?raw=true)
+![скрин](https://github.com/Electr0Nick/practice_onlinestore/blob/main/src/files/screenshot.PNG?raw=true)
 
 ### Описание:
 
