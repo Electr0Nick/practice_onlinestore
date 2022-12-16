@@ -1068,16 +1068,14 @@ body {
   display: grid;
   -ms-grid-columns: (30%)[3];
   grid-template-columns: repeat(3,30%);
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-column-gap: 5%;
+  -moz-column-gap: 5%;
+  column-gap: 5%;
+  row-gap: 25px;
   width: 100%;
-  padding: 25px 40px 0;
+  padding: 25px 40px;
   border-bottom: 4px solid #f68038;
   background-color: #fff
-}
-.search-block__item {
-  margin-bottom: 25px
 }
 .search-block__checkbox {
   display: none

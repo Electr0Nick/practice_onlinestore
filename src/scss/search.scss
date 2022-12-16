@@ -89,14 +89,14 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(3, 30%);
-    justify-content: space-between;
+    column-gap: 5%;
+    row-gap: 25px;
     width: 100%;
-    padding: 25px 40px 0;
+    padding: 25px 40px;
     border-bottom: 4px solid $third_color;
     background-color: $bg_color;
   }
   &__item {
-    margin-bottom: 25px;
   }
   &__checkbox {
     display: none;
