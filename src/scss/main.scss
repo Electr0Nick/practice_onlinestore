@@ -1,5 +1,8 @@
 .main {
   margin-top: 165px;
+
+  min-height: 300vh;// temp
+  
   @media($media-mxw4){
     margin-top: 105px;
   }
@@ -45,8 +48,6 @@
   &__rightside {
     flex: 1 1 auto;
     min-width: 0;
-    
-    min-height: 100vh;// temp
   }
   &__search {
     width: 100%;
@@ -64,5 +65,8 @@
     @media ($media-mxw4) {
       margin-bottom: 10px;
     }
+  }
+  &__popular {
+    width: 100%;
   }
 }

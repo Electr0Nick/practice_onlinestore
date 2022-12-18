@@ -1,0 +1,49 @@
+.popular {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    color: $second_color_medium;
+    font-family: UniSansHeavyCaps, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 28px;
+    text-transform: uppercase;
+  }
+  &__manage {
+    display: flex;
+  }
+  &__btn {
+    color: $main_color;
+    font-size: 36px;
+    line-height: 0;
+    cursor: pointer;
+    &_prev {
+      transform: rotate(180deg);
+    }
+    &_next {
+
+    }
+    &:hover {
+      color: $third_color;
+    }
+  }
+  &__body {
+    width: 100%;
+  }
+  &__slide {
+    display: grid;
+    grid-template: repeat(2, 383px) / repeat(3, 31%);
+    column-gap: 3.5%;
+    row-gap: 30px;
+    width: 100%;
+  }
+  &__product-card {
+
+  }
+}

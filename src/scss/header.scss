@@ -397,6 +397,10 @@
   }
   &__basket {
     position: relative;
+    & .basket__circle {
+      width: 44px;
+      height: 44px;
+    }
     @media ($media-mxw4){
       & .basket__circle {
         width: 35px;
