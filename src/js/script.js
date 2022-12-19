@@ -7,8 +7,10 @@ isWebp();
 import { useDynamicAdapt } from './modules/dynamic-adapt.js'
 useDynamicAdapt();
 // слайдеры ------------------------------------- ----------------------------
-import { topSwiper } from './swiper_settings.js'
+import { topSwiper, popSwiper } from './swiper_settings.js'
 topSwiper();
+popSwiper();
+
 
 // присвоение/изъятие у элемента класса .active ------------------------------------- ----------------------------
 const activeClass = (el) => el.classList.toggle('active');
@@ -42,8 +44,8 @@ const addActiveForCtlg = () => {
   }
 }
 сatalogButton.addEventListener('click', addActiveForCtlg);
-  
-  
+
+
 // плавное открытие панели каталог-бара ------------------------------------- ------------------------
 for (let i = 0; i < arrCatalogMenuItems.length; i++) {
   const menuItem = arrCatalogMenuItems[i];

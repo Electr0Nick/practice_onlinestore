@@ -1,9 +1,11 @@
+// -------------------------------------rub-------------------------------------
 .rub {
   &::after {
     content: ' ₽';
   }
 }
 
+// -------------------------------------ibg-------------------------------------
 .ibg {
   position: relative;
 }
@@ -16,6 +18,7 @@
   object-fit: cover;
 }
 
+// -------------------------------------basket-------------------------------------
 .basket {
   &__circle {
     display: flex;
@@ -50,6 +53,7 @@
   }
 }
 
+// -------------------------------------product-card-------------------------------------
 .product-card {
   position: relative;
   display: flex;
@@ -123,6 +127,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 40px;
   }
   &__basket {
     &_main {

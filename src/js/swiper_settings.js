@@ -1,5 +1,6 @@
 import Swiper from './modules/swiper-bundle.esm.browser.min.js';
 
+// -----------------------------------------topslider-----------------------------------------
 export function topSwiper() {
 
   const topSlider = new Swiper('.top-slider', {
@@ -20,7 +21,7 @@ export function topSwiper() {
     },
   })
 
-  // установка фоновых изображений на буллеты ------------------------------------- --------------------------------------- --
+  // установка фоновых изображений на буллеты
   const collectionImages = document.querySelectorAll('.top-slider__img');
   const arrImages = [];
   for (const i of collectionImages) {
@@ -33,5 +34,22 @@ export function topSwiper() {
     const imagePath = arrImages[i].getAttribute('src');
     arrBullets[i].style.backgroundImage = `url('${imagePath}')`;
   }
+
+}
+
+// -----------------------------------------popular slider-----------------------------------------
+export function popSwiper() {
+
+  const popSlider = new Swiper('.popular', {
+    wrapperClass: 'popular__body',
+    slideClass: 'popular__slide',
+    speed: 1000,
+    spaceBetween: 30,
+    simulateTouch: false,
+    navigation: {
+      prevEl: `.popular__btn_prev`,
+      nextEl: `.popular__btn_next`,
+    },
+  })
 
 }
