@@ -40,6 +40,9 @@
     @media ($media-mxw4) {
       margin-bottom: 10px;
     }
+    @media ($media-mxw5) {
+      margin-bottom: 0;
+    }
   }
   &__reviews {
     width: 100%;
@@ -52,7 +55,7 @@
   &__search {
     width: 100%;
     margin-bottom: 22px;
-    @media ($media-mxw4) {
+    @media ($media-mxw5) {
       margin-bottom: 8px;
     }
   }
@@ -62,11 +65,15 @@
     @media ($media-mxw2) {
       margin-bottom: 40px;
     }
-    @media ($media-mxw4) {
-      margin-bottom: 10px;
+    @media ($media-mxw5) {
+      margin-bottom: 0;
     }
   }
   &__popular {
     width: 100%;
+    margin-bottom: 20px;
+    @media ($media-mxw5) {
+      margin-bottom: 0;
+    }
   }
 }

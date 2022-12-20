@@ -50,6 +50,10 @@ export function popSwiper() {
       prevEl: `.popular__btn_prev`,
       nextEl: `.popular__btn_next`,
     },
+    pagination: {
+      el: `.popular__fraction`,
+      type: `fraction`,
+    },
   })
 
 }

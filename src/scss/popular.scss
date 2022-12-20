@@ -7,6 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   &__title {
     color: $second_color_medium;
@@ -15,23 +16,47 @@
     font-weight: 400;
     line-height: 28px;
     text-transform: uppercase;
+    cursor: default;
+    @media ($media-mxw5) {
+      font-size: 30px;
+    }
   }
   &__manage {
     display: flex;
+    align-items: center;
+    gap: 16px;
+    @media ($media-mxw4) {
+      gap: 10px;
+    }
   }
   &__btn {
     color: $main_color;
     font-size: 36px;
     line-height: 0;
     cursor: pointer;
+    transition: 200ms;
     &_prev {
       transform: rotate(180deg);
     }
     &_next {
-
     }
-    &:hover {
-      color: $third_color;
+    @media ($media-mnw1) {
+      &:hover {
+        color: $third_color;
+      }
+    }
+  }
+  &__fraction {
+    color: $second_color_dark;
+    font-size: 14px;
+    cursor: default;
+    & .swiper-pagination-current {
+      color: $second_color_black;
+      font-size: 30px;
+      font-weight: 900;
+      @media ($media-mxw4) {
+        font-size: 26px;
+      }
     }
   }
   &__body {
@@ -42,7 +67,8 @@
   &__slide {
     flex-shrink: 0;
     display: grid;
-    grid-template: repeat(2, 383px) / repeat(3, 31%);
+    grid-template-columns: repeat(3, 31%);
+    grid-auto-rows: max-content;
     column-gap: 3.5%;
     row-gap: 30px;
     width: 100%;
