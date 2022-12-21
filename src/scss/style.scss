@@ -42,6 +42,8 @@ body {
     font-family: Roboto, sans-serif;
     font-size: 12px;
     font-weight: 400;
+
+    min-height: 2000px;
 }
 
 // ----------------------------------------------wrapper----------------------------------------------
@@ -71,5 +73,6 @@ body {
 @import 'search.scss';
 @import 'swiper.scss';
 @import 'topslider.scss';
-@import 'popular.scss';
+@import 'popularslider.scss';
+@import 'brandsslider.scss';
 @import 'footer.scss';

@@ -40,19 +40,40 @@ export function topSwiper() {
 // -----------------------------------------popular slider-----------------------------------------
 export function popSwiper() {
 
-  const popSlider = new Swiper('.popular', {
-    wrapperClass: 'popular__body',
-    slideClass: 'popular__slide',
+  const popSlider = new Swiper('.popular-slider', {
+    wrapperClass: 'popular-slider__body',
+    slideClass: 'popular-slider__slide',
     speed: 1000,
     spaceBetween: 30,
     simulateTouch: false,
     navigation: {
-      prevEl: `.popular__btn_prev`,
-      nextEl: `.popular__btn_next`,
+      prevEl: `.popular-slider__btn_prev`,
+      nextEl: `.popular-slider__btn_next`,
     },
     pagination: {
-      el: `.popular__fraction`,
+      el: `.popular-slider__fraction`,
       type: `fraction`,
+    },
+  })
+
+}
+
+// -----------------------------------------brands slider-----------------------------------------
+export function brandsSwiper() {
+
+  const brandsSlider = new Swiper('.brands-block__slider', {
+    wrapperClass: 'brands-block__wrapper',
+    slideClass: 'brands-block__slide',
+    speed: 800,
+    slidesPerView: 4,
+    loop: true,
+    navigation: {
+      prevEl: `.brands-block__button_prev`,
+      nextEl: `.brands-block__button_next`,
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
     },
   })
 

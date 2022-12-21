@@ -4,12 +4,13 @@
 import isWebp from './modules/can-browser-support-webp.js';
 isWebp();
 // для динамического адаптива ------------------------------------- ----------------------------
-import { useDynamicAdapt } from './modules/dynamic-adapt.js'
+import { useDynamicAdapt } from './modules/dynamic-adapt.js';
 useDynamicAdapt();
 // слайдеры ------------------------------------- ----------------------------
-import { topSwiper, popSwiper } from './swiper_settings.js'
+import { topSwiper, popSwiper, brandsSwiper } from './swiper_settings.js';
 topSwiper();
 popSwiper();
+brandsSwiper();
 
 
 // присвоение/изъятие у элемента класса .active ------------------------------------- ----------------------------

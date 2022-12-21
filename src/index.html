@@ -7,7 +7,7 @@
   <div class="wrapper">
     @@include('html/header.html')
     <main class="main">
-      <div class="main__container container">
+      <div class="main__top-container container">
         <aside class="main__leftside">
           <div class="main__catalogbar">
             @@include('html/catalogbar.html')
@@ -27,11 +27,18 @@
             @@include('html/topslider.html')
           </div>
           <div class="main__popular">
-            @@include('html/popular.html')
+            @@include('html/popularslider.html')
           </div>
-          
         </div>
       </div>
+      <div class="main__brands-block block-dashed">
+        <div class="main__brands-container container">
+          <div class="main__brands-slider">
+            @@include('html/brandsslider.html')
+          </div>
+        </div>
+      </div>
+      
     </main>
     @@include('html/footer.html')
   </div>

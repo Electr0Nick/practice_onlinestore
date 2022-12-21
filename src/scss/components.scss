@@ -243,3 +243,8 @@
     }
   }
 }
+
+.block-dashed {
+  border-top: 3px dashed $second_color_medium;
+  border-bottom: 3px dashed $second_color_medium;
+}

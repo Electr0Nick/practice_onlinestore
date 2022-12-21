@@ -1,0 +1,68 @@
+.brands-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  padding: 30px 0;
+  &__button {
+    color: $main_color;
+    font-size: 36px;
+    line-height: 0;
+    cursor: pointer;
+    transition: 200ms;
+    &_prev {
+      transform: rotate(180deg);
+    }
+    &_next {
+    }
+    @media ($media-mnw1) {
+      &:hover {
+        color: $third_color;
+      }
+    }
+  }
+  &__slider {
+    width: 100%;
+    margin: 0 40px;
+    overflow: hidden;
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  &__slide {
+    position: relative;
+    flex-shrink: 0;
+    width: 200px;
+    text-align: center;
+  }
+  &__link {
+    position: relative;
+  }
+  &__logo {
+    &_wb {
+      display: none;
+    }
+    &_col {
+      position: relative;
+    }
+    @media ($media-mnw1) {
+      &_wb {
+        display: block;
+      }
+      &_col {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: 200ms;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

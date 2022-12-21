@@ -1,7 +1,5 @@
 .main {
   margin-top: 165px;
-
-  min-height: 300vh;// temp
   
   @media($media-mxw4){
     margin-top: 105px;
@@ -9,7 +7,7 @@
   @media($media-mxw5){
     margin-top: 68px;
   }
-  &__container {
+  &__top-container {
     display: flex;
     gap: 30px;
     @media ($media-mxw2) {
@@ -46,6 +44,7 @@
   }
   &__reviews {
     width: 100%;
+    margin-bottom: 30px;
   }
   // -------------------------------------rightside-------------------------------------
   &__rightside {
@@ -75,5 +74,14 @@
     @media ($media-mxw5) {
       margin-bottom: 0;
     }
+  }
+  // -------------------------------------brands-slider-------------------------------------
+  &__brands-block {
+    width: 100%;
+  }
+  &__brands-container {
+  }
+  &__brands-slider {
+    width: 100%;
   }
 }
