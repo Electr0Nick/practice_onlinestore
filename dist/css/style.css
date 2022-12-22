@@ -207,7 +207,7 @@ body {
   font-family: Roboto,sans-serif;
   font-size: 12px;
   font-weight: 400;
-  min-height: 2000px
+  min-height: 2500px
 }
 .wrapper {
   width: 100%;
@@ -779,9 +779,13 @@ body {
   margin-bottom: 20px
 }
 .main__brands-block {
-  width: 100%
+  width: 100%;
+  margin-bottom: 30px
 }
 .main__brands-slider {
+  width: 100%
+}
+.main__about {
   width: 100%
 }
 .catalogbar {
@@ -1780,6 +1784,38 @@ body {
 }
 .brands-block__logo_col {
   position: relative
+}
+.about {
+  background-color: #009baf;
+  padding: 40px 35px 55px
+}
+.about__title {
+  margin-bottom: 30px;
+  color: #1ab9ce;
+  font-family: UniSansHeavyCaps,sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  cursor: default
+}
+.about__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6%;
+  color: #fff;
+  line-height: 20px
+}
+.about__left-column {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 47%;
+  flex: 0 0 47%
+}
+.about__right-column {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 47%;
+  flex: 0 0 47%
 }
 @media (min-width:992px) {
   .product-card__link_hover:hover .product-card__title {

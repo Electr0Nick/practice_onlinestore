@@ -1,0 +1,26 @@
+.about {
+  background-color: $main_color;
+  padding: 40px 35px 55px;
+  &__title {
+    margin-bottom: 30px;
+    color: $main_color_light;
+    font-family: UniSansHeavyCaps, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 24px;
+    text-transform: uppercase;
+    cursor: default;
+  }
+  &__text {
+    display: flex;
+    gap: 6%;
+    color: $main-text_color;
+    line-height: 20px;
+  }
+  &__left-column {
+    flex: 0 0 47%;
+  }
+  &__right-column {
+    flex: 0 0 47%;
+  }
+}

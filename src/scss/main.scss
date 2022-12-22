@@ -78,10 +78,17 @@
   // -------------------------------------brands-slider-------------------------------------
   &__brands-block {
     width: 100%;
+    margin-bottom: 30px;
   }
   &__brands-container {
   }
   &__brands-slider {
+    width: 100%;
+  }
+  // -------------------------------------brands-slider-------------------------------------
+  &__bottom-container {
+  }
+  &__about {
     width: 100%;
   }
 }
