@@ -18,6 +18,34 @@
   object-fit: cover;
 }
 
+// -------------------------------------logo-------------------------------------
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  background-color: $main_color;
+  @media($media-mxw4){
+    gap: 2px;
+  }
+  &__image {
+    width: 180px;
+    @media($media-mxw4){
+      width: 120px;
+    }
+  }
+  &__text {
+    color: $main-text_color;
+    font-size: 12px;
+    font-weight: 300;
+    cursor: default;
+    @media($media-mxw4){
+      font-size: 10px;
+    }
+  }
+}
+
 // -------------------------------------basket-------------------------------------
 .basket {
   &__circle {
@@ -185,6 +213,15 @@
     cursor: default;
     &::after {
       font-size: 18px;
+    }
+    @media ($media-mxw4) {
+      font-size: 20px;
+    }
+    @media ($media-mxw5) {
+      font-size: 24px;
+    }
+    @media ($media-mxw6) {
+      font-size: 20px;
     }
   }
   &__curtain {

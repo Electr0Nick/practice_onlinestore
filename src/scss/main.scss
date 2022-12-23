@@ -31,10 +31,7 @@
   }
   &__news {
     width: 100%;
-    margin-bottom: 40px;
-    @media ($media-mxw2) {
-      margin-bottom: 20px;
-    }
+    margin-bottom: 20px;
     @media ($media-mxw4) {
       margin-bottom: 10px;
     }
@@ -85,8 +82,9 @@
   &__brands-slider {
     width: 100%;
   }
-  // -------------------------------------brands-slider-------------------------------------
+  // -------------------------------------about-------------------------------------
   &__bottom-container {
+    margin-bottom: 36px;
   }
   &__about {
     width: 100%;

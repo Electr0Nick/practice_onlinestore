@@ -1,4 +1,132 @@
 .footer {
-    &__container {
+  width: 100%;
+
+  margin-bottom: 200px;//-------------------------temp
+  border-bottom: 1px solid #000;//-------------------------temp
+  &__up-block {
+    padding: 10px 0;
+  }
+  &__down-block {
+  }
+}
+.footer-up {
+  &__container {
+  }
+  &__block {
+    display: flex;
+    gap: 40px;
+    padding: 15px 10px;
+    &_info {
     }
+    &_help {
+    }
+  }
+  &__title {
+    font-size: 14px;
+    font-weight: 900;
+    cursor: default;
+  }
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__link {
+    color: $main_color_light;
+    @media ($media-mnw1) {
+      &:hover {
+        color: $second_color_black;
+      }
+    }
+  }
+  &__line {
+    width: 555px;
+    height: 1px;
+    background-color: $second_color_medium;
+  }
+}
+.footer-down {
+  &__container {
+  }
+  &__up-block {
+    display: flex;
+    gap: 3%;
+  }
+  &__left-colomn {
+    flex: 0 0 48.5%;
+    border: 1px solid #000;
+  }
+  &__info {
+  }
+  &__main-info {
+  }
+  &__logo {
+  }
+  &__phones {
+  }
+  &__delivery {
+  }
+  &__pay-services {
+  }
+  &__right-colomn {
+    flex: 0 0 48.5%;
+    border: 1px solid #000;
+  }
+  &__api-left {
+  }
+  &__api-right {
+  }
+  &__line {
+    width: 100%;
+    height: 1px;
+    background-color: $second_color_medium;
+  }
+  &__down-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+  }
+  &__license {
+    color: $second_color_dark;
+    cursor: default;
+  }
+  &__social-block {
+    display: flex;
+    gap: 15px;
+  }
+  &__social {
+    &::before {
+      font-size: 30px;
+    }
+    &_vk {
+      &::before {
+        color: $color_vk;
+      }
+    }
+    &_facebook {
+      &::before {
+        color: $color_facebook;
+      }
+    }
+    &_instagram {
+      &::before {
+        color: $color_instagram;
+      }
+    }
+    &_telegram {
+      &::before {
+        color: $color_telegram;
+      }
+    }
+  }
+}
+.footer-phones {
+  &__number {
+  }
+}
+.footer-delivery {
+  &__title {
+  }
+  &__items {
+  }
 }

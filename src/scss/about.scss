@@ -1,6 +1,10 @@
 .about {
+  position: relative;
   background-color: $main_color;
-  padding: 40px 35px 55px;
+  padding: 45px 60px 55px 45px;
+  @media ($media-mxw6) {
+    padding: 20px 20px;
+  }
   &__title {
     margin-bottom: 30px;
     color: $main_color_light;
@@ -13,14 +17,41 @@
   }
   &__text {
     display: flex;
-    gap: 6%;
+    gap: 8%;
     color: $main-text_color;
     line-height: 20px;
+    cursor: default;
+    @media ($media-mxw3) {
+      flex-direction: column;
+      gap: 30px;
+    }
   }
   &__left-column {
     flex: 0 0 47%;
   }
   &__right-column {
-    flex: 0 0 47%;
+    flex: 0 0 44%;
+    & h6 {
+      font-weight: 900;
+    }
+    & li::before {
+      margin: 0 20px 0 7px;
+      color: $main_color_pale;
+    }
+  }
+  &__image {
+    position: absolute;
+    &_front {
+      right: 20px;
+      bottom: -170px;
+    }
+    &_back {
+      right: 20px;
+      bottom: -170px;
+    }
+    @media ($media-mxw5) {
+      display: none;
+    }
   }
 }
+

@@ -65,7 +65,6 @@ export function brandsSwiper() {
     wrapperClass: 'brands-block__wrapper',
     slideClass: 'brands-block__slide',
     speed: 800,
-    slidesPerView: 4,
     loop: true,
     navigation: {
       prevEl: `.brands-block__button_prev`,
@@ -75,6 +74,20 @@ export function brandsSwiper() {
       delay: 5000,
       disableOnInteraction: false,
     },
+    breakpoints: {
+      320: {
+          slidesPerView: 1,
+      },
+      680: {
+          slidesPerView: 2,
+      },
+      880: {
+          slidesPerView: 3,
+      },
+      1100: {
+        slidesPerView: 4,
+    },
+  },
   })
 
 }

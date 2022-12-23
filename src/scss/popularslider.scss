@@ -8,6 +8,11 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    @media ($media-mxw6) {
+      flex-direction: column;
+      gap: 10px;
+      align-items: flex-start;
+    }
   }
   &__title {
     color: $second_color_medium;
@@ -35,6 +40,9 @@
     line-height: 0;
     cursor: pointer;
     transition: 200ms;
+    @media ($media-mxw5) {
+      font-size: 30px;
+    }
     &_prev {
       transform: rotate(180deg);
     }
@@ -71,9 +79,17 @@
     grid-auto-rows: max-content;
     column-gap: 3.5%;
     row-gap: 30px;
+    justify-content: center;
     width: 100%;
+    @media ($media-mxw5) {
+      grid-template-columns: repeat(2, 48%);
+      column-gap: 4%;
+    }
+    @media ($media-mxw7) {
+      grid-template-columns: 230px;
+      row-gap: 15px;
+    }
   }
   &__product-card {
-
   }
 }

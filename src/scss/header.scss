@@ -175,31 +175,6 @@
   }
   }
 }
-// -------------------------------------logo-------------------------------------
-.logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  width: 100%;
-  @media($media-mxw4){
-    gap: 2px;
-  }
-  &__image {
-    width: 180px;
-    @media($media-mxw4){
-      width: 120px;
-    }
-  }
-  &__text {
-    font-size: 12px;
-    font-weight: 300;
-    cursor: default;
-    @media($media-mxw4){
-      font-size: 10px;
-    }
-  }
-}
 // -------------------------------------phones-------------------------------------
 .phones {
   display: flex;
