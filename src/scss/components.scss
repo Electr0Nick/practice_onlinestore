@@ -22,6 +22,7 @@
 .logo {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   gap: 5px;
   width: 100%;
@@ -30,10 +31,8 @@
     gap: 2px;
   }
   &__image {
-    width: 180px;
-    @media($media-mxw4){
-      width: 120px;
-    }
+    align-self: center;
+    width: 80%;
   }
   &__text {
     color: $main-text_color;

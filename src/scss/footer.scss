@@ -1,15 +1,14 @@
 .footer {
   width: 100%;
-
-  margin-bottom: 200px;//-------------------------temp
-  border-bottom: 1px solid #000;//-------------------------temp
   &__up-block {
-    padding: 10px 0;
+    margin-bottom: 40px;
   }
   &__down-block {
   }
 }
+// ----------------------------------------------footer-up----------------------------------------------
 .footer-up {
+  padding: 10px 0;
   &__container {
   }
   &__block {
@@ -44,28 +43,40 @@
     background-color: $second_color_medium;
   }
 }
+// ----------------------------------------------footer-down----------------------------------------------
 .footer-down {
   &__container {
   }
   &__up-block {
     display: flex;
     gap: 3%;
+    margin-bottom: 25px;
   }
   &__left-colomn {
     flex: 0 0 48.5%;
-    border: 1px solid #000;
   }
   &__info {
+    display: flex;
+    gap: 45px;
+    margin-bottom: 40px;
   }
   &__main-info {
+    flex: 0 0 30%;
   }
   &__logo {
+    height: 90px;
+    margin-bottom: 26px;
   }
   &__phones {
   }
   &__delivery {
   }
   &__pay-services {
+    
+  }
+  &__pay-link {
+    max-width: 50px;
+    margin-right: 20px;
   }
   &__right-colomn {
     flex: 0 0 48.5%;
@@ -120,13 +131,45 @@
     }
   }
 }
+// ----------------------------------------------blocks----------------------------------------------
 .footer-phones {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  &__icon {
+    &::before {
+      font-size: 30px;
+    }
+  }
+  &__phones {
+    display: flex;
+    flex-direction: column;
+  }
   &__number {
+    font-size: 14px;
+    font-weight: 900;
   }
 }
 .footer-delivery {
   &__title {
+    margin-bottom: 15px;
+    color: $second_color_dark;
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
   }
   &__items {
+    display: grid;
+    grid-template: repeat(2, 50px) / repeat(3, 30%);
+    column-gap: 5%;
+    row-gap: 10px;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & img {
+      object-fit: contain;
+    }
   }
 }

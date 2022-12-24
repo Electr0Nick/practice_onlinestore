@@ -7,7 +7,7 @@ isWebp();
 import { useDynamicAdapt } from './modules/dynamic-adapt.js';
 useDynamicAdapt();
 // слайдеры ------------------------------------- ----------------------------
-import { topSwiper, popSwiper, brandsSwiper } from './swiper_settings.js';
+import { topSwiper, popSwiper, brandsSwiper } from './swiper-settings.js';
 topSwiper();
 popSwiper();
 brandsSwiper();
