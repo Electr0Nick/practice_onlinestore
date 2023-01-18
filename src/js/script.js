@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 // для сборки GULP: ------------------------------------- --------------------------------------
 import isWebp from './modules/can-browser-support-webp.js';
